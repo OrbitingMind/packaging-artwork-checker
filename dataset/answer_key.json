@@ -1,0 +1,2481 @@
+{
+  "biscuit_clean1.png": {
+    "product": "biscuit",
+    "injected_errors": [],
+    "fields": {
+      "product": "biscuit",
+      "product_name": "Crunchy Oat Biscuits",
+      "net_quantity": "200 g",
+      "veg_mark": "veg",
+      "ingredients": "Wheat flour, oats, sugar, palm oil, invert syrup, salt, raising agents",
+      "has_allergens": true,
+      "allergens": "Contains wheat, oats. May contain milk.",
+      "manufacturer": "Golden Crust Foods Pvt Ltd, 12 MG Road, Bengaluru 560001",
+      "fssai_license": "10020042001234",
+      "mrp": "Rs. 40.00",
+      "best_before": "Best before 6 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "biscuit_clean2.png": {
+    "product": "biscuit",
+    "injected_errors": [],
+    "fields": {
+      "product": "biscuit",
+      "product_name": "Crunchy Oat Biscuits",
+      "net_quantity": "200 g",
+      "veg_mark": "veg",
+      "ingredients": "Wheat flour, oats, sugar, palm oil, invert syrup, salt, raising agents",
+      "has_allergens": true,
+      "allergens": "Contains wheat, oats. May contain milk.",
+      "manufacturer": "Golden Crust Foods Pvt Ltd, 12 MG Road, Bengaluru 560001",
+      "fssai_license": "10020042001234",
+      "mrp": "Rs. 40.00",
+      "best_before": "Best before 6 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "biscuit_errR01.png": {
+    "product": "biscuit",
+    "injected_errors": [
+      "R01"
+    ],
+    "fields": {
+      "product": "biscuit",
+      "product_name": "Crunchy Oat Biscuits",
+      "net_quantity": "",
+      "veg_mark": "veg",
+      "ingredients": "Wheat flour, oats, sugar, palm oil, invert syrup, salt, raising agents",
+      "has_allergens": true,
+      "allergens": "Contains wheat, oats. May contain milk.",
+      "manufacturer": "Golden Crust Foods Pvt Ltd, 12 MG Road, Bengaluru 560001",
+      "fssai_license": "10020042001234",
+      "mrp": "Rs. 40.00",
+      "best_before": "Best before 6 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "fail",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "fail",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "biscuit_errR02.png": {
+    "product": "biscuit",
+    "injected_errors": [
+      "R02"
+    ],
+    "fields": {
+      "product": "biscuit",
+      "product_name": "Crunchy Oat Biscuits",
+      "net_quantity": "20 g",
+      "veg_mark": "veg",
+      "ingredients": "Wheat flour, oats, sugar, palm oil, invert syrup, salt, raising agents",
+      "has_allergens": true,
+      "allergens": "Contains wheat, oats. May contain milk.",
+      "manufacturer": "Golden Crust Foods Pvt Ltd, 12 MG Road, Bengaluru 560001",
+      "fssai_license": "10020042001234",
+      "mrp": "Rs. 40.00",
+      "best_before": "Best before 6 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "fail",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "fail",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "biscuit_errR03.png": {
+    "product": "biscuit",
+    "injected_errors": [
+      "R03"
+    ],
+    "fields": {
+      "product": "biscuit",
+      "product_name": "Crunchy Oat Biscuits",
+      "net_quantity": "200 gm",
+      "veg_mark": "veg",
+      "ingredients": "Wheat flour, oats, sugar, palm oil, invert syrup, salt, raising agents",
+      "has_allergens": true,
+      "allergens": "Contains wheat, oats. May contain milk.",
+      "manufacturer": "Golden Crust Foods Pvt Ltd, 12 MG Road, Bengaluru 560001",
+      "fssai_license": "10020042001234",
+      "mrp": "Rs. 40.00",
+      "best_before": "Best before 6 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "fail",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "fail",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "biscuit_errR04.png": {
+    "product": "biscuit",
+    "injected_errors": [
+      "R04"
+    ],
+    "fields": {
+      "product": "biscuit",
+      "product_name": "Crunchy Oat Biscuits",
+      "net_quantity": "200 g",
+      "veg_mark": "",
+      "ingredients": "Wheat flour, oats, sugar, palm oil, invert syrup, salt, raising agents",
+      "has_allergens": true,
+      "allergens": "Contains wheat, oats. May contain milk.",
+      "manufacturer": "Golden Crust Foods Pvt Ltd, 12 MG Road, Bengaluru 560001",
+      "fssai_license": "10020042001234",
+      "mrp": "Rs. 40.00",
+      "best_before": "Best before 6 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "fail",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "fail",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "biscuit_errR05.png": {
+    "product": "biscuit",
+    "injected_errors": [
+      "R05"
+    ],
+    "fields": {
+      "product": "biscuit",
+      "product_name": "Crunchy Oat Biscuits",
+      "net_quantity": "200 g",
+      "veg_mark": "veg",
+      "ingredients": "Wheat flour, oats, sugar, palm oil, invert syrup, salt, raising agents",
+      "has_allergens": true,
+      "allergens": "",
+      "manufacturer": "Golden Crust Foods Pvt Ltd, 12 MG Road, Bengaluru 560001",
+      "fssai_license": "10020042001234",
+      "mrp": "Rs. 40.00",
+      "best_before": "Best before 6 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "fail",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "fail",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "biscuit_errR06.png": {
+    "product": "biscuit",
+    "injected_errors": [
+      "R06"
+    ],
+    "fields": {
+      "product": "biscuit",
+      "product_name": "Crunchy Oat Biscuits",
+      "net_quantity": "200 g",
+      "veg_mark": "veg",
+      "ingredients": "Wheat flour, oats, sugar, palm oil, invert syrup, salt, raising agents",
+      "has_allergens": true,
+      "allergens": "Contains wheat. May contain milk.",
+      "manufacturer": "Golden Crust Foods Pvt Ltd, 12 MG Road, Bengaluru 560001",
+      "fssai_license": "10020042001234",
+      "mrp": "Rs. 40.00",
+      "best_before": "Best before 6 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "fail",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "fail",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "biscuit_errR07.png": {
+    "product": "biscuit",
+    "injected_errors": [
+      "R07"
+    ],
+    "fields": {
+      "product": "biscuit",
+      "product_name": "Crunchy Oat Biscuits",
+      "net_quantity": "200 g",
+      "veg_mark": "veg",
+      "ingredients": "Wheat flour, sugar, palm oil, invert syrup, salt, raising agents",
+      "has_allergens": true,
+      "allergens": "Contains wheat, oats. May contain milk.",
+      "manufacturer": "Golden Crust Foods Pvt Ltd, 12 MG Road, Bengaluru 560001",
+      "fssai_license": "10020042001234",
+      "mrp": "Rs. 40.00",
+      "best_before": "Best before 6 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "fail",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "fail",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "biscuit_errR08.png": {
+    "product": "biscuit",
+    "injected_errors": [
+      "R08"
+    ],
+    "fields": {
+      "product": "biscuit",
+      "product_name": "Crunchy Oat Biscuits",
+      "net_quantity": "200 g",
+      "veg_mark": "veg",
+      "ingredients": "Wheat flour, oats, sugar, palm oil, invert syrup, salt, raising agents",
+      "has_allergens": true,
+      "allergens": "Contains wheat, oats. May contain milk.",
+      "manufacturer": "",
+      "fssai_license": "10020042001234",
+      "mrp": "Rs. 40.00",
+      "best_before": "Best before 6 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "fail",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "fail",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "biscuit_errR09.png": {
+    "product": "biscuit",
+    "injected_errors": [
+      "R09"
+    ],
+    "fields": {
+      "product": "biscuit",
+      "product_name": "Crunchy Oat Biscuits",
+      "net_quantity": "200 g",
+      "veg_mark": "veg",
+      "ingredients": "Wheat flour, oats, sugar, palm oil, invert syrup, salt, raising agents",
+      "has_allergens": true,
+      "allergens": "Contains wheat, oats. May contain milk.",
+      "manufacturer": "Golden Crust Foods Pvt Ltd, 12 MG Road, Bengaluru 560001",
+      "fssai_license": "1002004200123",
+      "mrp": "Rs. 40.00",
+      "best_before": "Best before 6 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "fail",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "fail",
+      "R10": "pass"
+    }
+  },
+  "biscuit_errR10.png": {
+    "product": "biscuit",
+    "injected_errors": [
+      "R10"
+    ],
+    "fields": {
+      "product": "biscuit",
+      "product_name": "Crunchy Oat Biscuits",
+      "net_quantity": "200 g",
+      "veg_mark": "veg",
+      "ingredients": "Wheat flour, oats, sugar, palm oil, invert syrup, salt, raising agents",
+      "has_allergens": true,
+      "allergens": "Contains wheat, oats. May contain milk.",
+      "manufacturer": "Golden Crust Foods Pvt Ltd, 12 MG Road, Bengaluru 560001",
+      "fssai_license": "10020042001234",
+      "mrp": "",
+      "best_before": "Best before 6 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "fail"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "fail"
+    },
+    "r10_removed": "mrp"
+  },
+  "chips_clean1.png": {
+    "product": "chips",
+    "injected_errors": [],
+    "fields": {
+      "product": "chips",
+      "product_name": "Masala Potato Chips",
+      "net_quantity": "52 g",
+      "veg_mark": "veg",
+      "ingredients": "Potato, edible vegetable oil (palm), spices and condiments, salt, milk solids",
+      "has_allergens": true,
+      "allergens": "Contains milk. May contain wheat and soy.",
+      "manufacturer": "Crispo Snacks Pvt Ltd, 3 Ring Road, Mangaluru 575001",
+      "fssai_license": "12122008000321",
+      "mrp": "Rs. 20.00",
+      "best_before": "Best before 4 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "chips_clean2.png": {
+    "product": "chips",
+    "injected_errors": [],
+    "fields": {
+      "product": "chips",
+      "product_name": "Masala Potato Chips",
+      "net_quantity": "52 g",
+      "veg_mark": "veg",
+      "ingredients": "Potato, edible vegetable oil (palm), spices and condiments, salt, milk solids",
+      "has_allergens": true,
+      "allergens": "Contains milk. May contain wheat and soy.",
+      "manufacturer": "Crispo Snacks Pvt Ltd, 3 Ring Road, Mangaluru 575001",
+      "fssai_license": "12122008000321",
+      "mrp": "Rs. 20.00",
+      "best_before": "Best before 4 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "chips_errR01.png": {
+    "product": "chips",
+    "injected_errors": [
+      "R01"
+    ],
+    "fields": {
+      "product": "chips",
+      "product_name": "Masala Potato Chips",
+      "net_quantity": "",
+      "veg_mark": "veg",
+      "ingredients": "Potato, edible vegetable oil (palm), spices and condiments, salt, milk solids",
+      "has_allergens": true,
+      "allergens": "Contains milk. May contain wheat and soy.",
+      "manufacturer": "Crispo Snacks Pvt Ltd, 3 Ring Road, Mangaluru 575001",
+      "fssai_license": "12122008000321",
+      "mrp": "Rs. 20.00",
+      "best_before": "Best before 4 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "fail",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "fail",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "chips_errR02.png": {
+    "product": "chips",
+    "injected_errors": [
+      "R02"
+    ],
+    "fields": {
+      "product": "chips",
+      "product_name": "Masala Potato Chips",
+      "net_quantity": "25 g",
+      "veg_mark": "veg",
+      "ingredients": "Potato, edible vegetable oil (palm), spices and condiments, salt, milk solids",
+      "has_allergens": true,
+      "allergens": "Contains milk. May contain wheat and soy.",
+      "manufacturer": "Crispo Snacks Pvt Ltd, 3 Ring Road, Mangaluru 575001",
+      "fssai_license": "12122008000321",
+      "mrp": "Rs. 20.00",
+      "best_before": "Best before 4 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "fail",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "fail",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "chips_errR03.png": {
+    "product": "chips",
+    "injected_errors": [
+      "R03"
+    ],
+    "fields": {
+      "product": "chips",
+      "product_name": "Masala Potato Chips",
+      "net_quantity": "52 gm",
+      "veg_mark": "veg",
+      "ingredients": "Potato, edible vegetable oil (palm), spices and condiments, salt, milk solids",
+      "has_allergens": true,
+      "allergens": "Contains milk. May contain wheat and soy.",
+      "manufacturer": "Crispo Snacks Pvt Ltd, 3 Ring Road, Mangaluru 575001",
+      "fssai_license": "12122008000321",
+      "mrp": "Rs. 20.00",
+      "best_before": "Best before 4 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "fail",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "fail",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "chips_errR04.png": {
+    "product": "chips",
+    "injected_errors": [
+      "R04"
+    ],
+    "fields": {
+      "product": "chips",
+      "product_name": "Masala Potato Chips",
+      "net_quantity": "52 g",
+      "veg_mark": "",
+      "ingredients": "Potato, edible vegetable oil (palm), spices and condiments, salt, milk solids",
+      "has_allergens": true,
+      "allergens": "Contains milk. May contain wheat and soy.",
+      "manufacturer": "Crispo Snacks Pvt Ltd, 3 Ring Road, Mangaluru 575001",
+      "fssai_license": "12122008000321",
+      "mrp": "Rs. 20.00",
+      "best_before": "Best before 4 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "fail",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "fail",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "chips_errR05.png": {
+    "product": "chips",
+    "injected_errors": [
+      "R05"
+    ],
+    "fields": {
+      "product": "chips",
+      "product_name": "Masala Potato Chips",
+      "net_quantity": "52 g",
+      "veg_mark": "veg",
+      "ingredients": "Potato, edible vegetable oil (palm), spices and condiments, salt, milk solids",
+      "has_allergens": true,
+      "allergens": "",
+      "manufacturer": "Crispo Snacks Pvt Ltd, 3 Ring Road, Mangaluru 575001",
+      "fssai_license": "12122008000321",
+      "mrp": "Rs. 20.00",
+      "best_before": "Best before 4 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "fail",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "fail",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "chips_errR06.png": {
+    "product": "chips",
+    "injected_errors": [
+      "R06"
+    ],
+    "fields": {
+      "product": "chips",
+      "product_name": "Masala Potato Chips",
+      "net_quantity": "52 g",
+      "veg_mark": "veg",
+      "ingredients": "Potato, edible vegetable oil (palm), spices and condiments, salt, milk solids",
+      "has_allergens": true,
+      "allergens": "Contains milk. May contain wheat.",
+      "manufacturer": "Crispo Snacks Pvt Ltd, 3 Ring Road, Mangaluru 575001",
+      "fssai_license": "12122008000321",
+      "mrp": "Rs. 20.00",
+      "best_before": "Best before 4 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "fail",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "fail",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "chips_errR07.png": {
+    "product": "chips",
+    "injected_errors": [
+      "R07"
+    ],
+    "fields": {
+      "product": "chips",
+      "product_name": "Masala Potato Chips",
+      "net_quantity": "52 g",
+      "veg_mark": "veg",
+      "ingredients": "Potato, edible vegetable oil (palm), spices and condiments, salt",
+      "has_allergens": true,
+      "allergens": "Contains milk. May contain wheat and soy.",
+      "manufacturer": "Crispo Snacks Pvt Ltd, 3 Ring Road, Mangaluru 575001",
+      "fssai_license": "12122008000321",
+      "mrp": "Rs. 20.00",
+      "best_before": "Best before 4 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "fail",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "fail",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "chips_errR08.png": {
+    "product": "chips",
+    "injected_errors": [
+      "R08"
+    ],
+    "fields": {
+      "product": "chips",
+      "product_name": "Masala Potato Chips",
+      "net_quantity": "52 g",
+      "veg_mark": "veg",
+      "ingredients": "Potato, edible vegetable oil (palm), spices and condiments, salt, milk solids",
+      "has_allergens": true,
+      "allergens": "Contains milk. May contain wheat and soy.",
+      "manufacturer": "",
+      "fssai_license": "12122008000321",
+      "mrp": "Rs. 20.00",
+      "best_before": "Best before 4 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "fail",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "fail",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "chips_errR09.png": {
+    "product": "chips",
+    "injected_errors": [
+      "R09"
+    ],
+    "fields": {
+      "product": "chips",
+      "product_name": "Masala Potato Chips",
+      "net_quantity": "52 g",
+      "veg_mark": "veg",
+      "ingredients": "Potato, edible vegetable oil (palm), spices and condiments, salt, milk solids",
+      "has_allergens": true,
+      "allergens": "Contains milk. May contain wheat and soy.",
+      "manufacturer": "Crispo Snacks Pvt Ltd, 3 Ring Road, Mangaluru 575001",
+      "fssai_license": "1212200800032",
+      "mrp": "Rs. 20.00",
+      "best_before": "Best before 4 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "fail",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "fail",
+      "R10": "pass"
+    }
+  },
+  "chips_errR10.png": {
+    "product": "chips",
+    "injected_errors": [
+      "R10"
+    ],
+    "fields": {
+      "product": "chips",
+      "product_name": "Masala Potato Chips",
+      "net_quantity": "52 g",
+      "veg_mark": "veg",
+      "ingredients": "Potato, edible vegetable oil (palm), spices and condiments, salt, milk solids",
+      "has_allergens": true,
+      "allergens": "Contains milk. May contain wheat and soy.",
+      "manufacturer": "Crispo Snacks Pvt Ltd, 3 Ring Road, Mangaluru 575001",
+      "fssai_license": "12122008000321",
+      "mrp": "",
+      "best_before": "Best before 4 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "fail"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "fail"
+    },
+    "r10_removed": "mrp"
+  },
+  "juice_clean1.png": {
+    "product": "juice",
+    "injected_errors": [],
+    "fields": {
+      "product": "juice",
+      "product_name": "Orange Fruit Drink",
+      "net_quantity": "1 L",
+      "veg_mark": "veg",
+      "ingredients": "Water, orange juice concentrate (10%), sugar, acidity regulator (330), preservative (223)",
+      "has_allergens": true,
+      "allergens": "Contains sulphite.",
+      "manufacturer": "Sunvale Beverages Pvt Ltd, 8 Industrial Area, Hubballi 580030",
+      "fssai_license": "10024011000789",
+      "mrp": "Rs. 110.00",
+      "best_before": "Best before 9 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "juice_clean2.png": {
+    "product": "juice",
+    "injected_errors": [],
+    "fields": {
+      "product": "juice",
+      "product_name": "Orange Fruit Drink",
+      "net_quantity": "1 L",
+      "veg_mark": "veg",
+      "ingredients": "Water, orange juice concentrate (10%), sugar, acidity regulator (330), preservative (223)",
+      "has_allergens": true,
+      "allergens": "Contains sulphite.",
+      "manufacturer": "Sunvale Beverages Pvt Ltd, 8 Industrial Area, Hubballi 580030",
+      "fssai_license": "10024011000789",
+      "mrp": "Rs. 110.00",
+      "best_before": "Best before 9 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "juice_errR01.png": {
+    "product": "juice",
+    "injected_errors": [
+      "R01"
+    ],
+    "fields": {
+      "product": "juice",
+      "product_name": "Orange Fruit Drink",
+      "net_quantity": "",
+      "veg_mark": "veg",
+      "ingredients": "Water, orange juice concentrate (10%), sugar, acidity regulator (330), preservative (223)",
+      "has_allergens": true,
+      "allergens": "Contains sulphite.",
+      "manufacturer": "Sunvale Beverages Pvt Ltd, 8 Industrial Area, Hubballi 580030",
+      "fssai_license": "10024011000789",
+      "mrp": "Rs. 110.00",
+      "best_before": "Best before 9 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "fail",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "fail",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "juice_errR02.png": {
+    "product": "juice",
+    "injected_errors": [
+      "R02"
+    ],
+    "fields": {
+      "product": "juice",
+      "product_name": "Orange Fruit Drink",
+      "net_quantity": "2 L",
+      "veg_mark": "veg",
+      "ingredients": "Water, orange juice concentrate (10%), sugar, acidity regulator (330), preservative (223)",
+      "has_allergens": true,
+      "allergens": "Contains sulphite.",
+      "manufacturer": "Sunvale Beverages Pvt Ltd, 8 Industrial Area, Hubballi 580030",
+      "fssai_license": "10024011000789",
+      "mrp": "Rs. 110.00",
+      "best_before": "Best before 9 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "fail",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "fail",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "juice_errR03.png": {
+    "product": "juice",
+    "injected_errors": [
+      "R03"
+    ],
+    "fields": {
+      "product": "juice",
+      "product_name": "Orange Fruit Drink",
+      "net_quantity": "1 ltr",
+      "veg_mark": "veg",
+      "ingredients": "Water, orange juice concentrate (10%), sugar, acidity regulator (330), preservative (223)",
+      "has_allergens": true,
+      "allergens": "Contains sulphite.",
+      "manufacturer": "Sunvale Beverages Pvt Ltd, 8 Industrial Area, Hubballi 580030",
+      "fssai_license": "10024011000789",
+      "mrp": "Rs. 110.00",
+      "best_before": "Best before 9 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "fail",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "fail",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "juice_errR04.png": {
+    "product": "juice",
+    "injected_errors": [
+      "R04"
+    ],
+    "fields": {
+      "product": "juice",
+      "product_name": "Orange Fruit Drink",
+      "net_quantity": "1 L",
+      "veg_mark": "",
+      "ingredients": "Water, orange juice concentrate (10%), sugar, acidity regulator (330), preservative (223)",
+      "has_allergens": true,
+      "allergens": "Contains sulphite.",
+      "manufacturer": "Sunvale Beverages Pvt Ltd, 8 Industrial Area, Hubballi 580030",
+      "fssai_license": "10024011000789",
+      "mrp": "Rs. 110.00",
+      "best_before": "Best before 9 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "fail",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "fail",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "juice_errR05.png": {
+    "product": "juice",
+    "injected_errors": [
+      "R05"
+    ],
+    "fields": {
+      "product": "juice",
+      "product_name": "Orange Fruit Drink",
+      "net_quantity": "1 L",
+      "veg_mark": "veg",
+      "ingredients": "Water, orange juice concentrate (10%), sugar, acidity regulator (330), preservative (223)",
+      "has_allergens": true,
+      "allergens": "",
+      "manufacturer": "Sunvale Beverages Pvt Ltd, 8 Industrial Area, Hubballi 580030",
+      "fssai_license": "10024011000789",
+      "mrp": "Rs. 110.00",
+      "best_before": "Best before 9 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "fail",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "fail",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "juice_errR06.png": {
+    "product": "juice",
+    "injected_errors": [
+      "R06"
+    ],
+    "fields": {
+      "product": "juice",
+      "product_name": "Orange Fruit Drink",
+      "net_quantity": "1 L",
+      "veg_mark": "veg",
+      "ingredients": "Water, orange juice concentrate (10%), sugar, acidity regulator (330), preservative (223)",
+      "has_allergens": true,
+      "allergens": "Contains.",
+      "manufacturer": "Sunvale Beverages Pvt Ltd, 8 Industrial Area, Hubballi 580030",
+      "fssai_license": "10024011000789",
+      "mrp": "Rs. 110.00",
+      "best_before": "Best before 9 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "fail",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "fail",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "juice_errR07.png": {
+    "product": "juice",
+    "injected_errors": [
+      "R07"
+    ],
+    "fields": {
+      "product": "juice",
+      "product_name": "Orange Fruit Drink",
+      "net_quantity": "1 L",
+      "veg_mark": "veg",
+      "ingredients": "Water, orange juice concentrate (10%), acidity regulator (330), preservative (223)",
+      "has_allergens": true,
+      "allergens": "Contains sulphite.",
+      "manufacturer": "Sunvale Beverages Pvt Ltd, 8 Industrial Area, Hubballi 580030",
+      "fssai_license": "10024011000789",
+      "mrp": "Rs. 110.00",
+      "best_before": "Best before 9 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "fail",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "fail",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "juice_errR08.png": {
+    "product": "juice",
+    "injected_errors": [
+      "R08"
+    ],
+    "fields": {
+      "product": "juice",
+      "product_name": "Orange Fruit Drink",
+      "net_quantity": "1 L",
+      "veg_mark": "veg",
+      "ingredients": "Water, orange juice concentrate (10%), sugar, acidity regulator (330), preservative (223)",
+      "has_allergens": true,
+      "allergens": "Contains sulphite.",
+      "manufacturer": "",
+      "fssai_license": "10024011000789",
+      "mrp": "Rs. 110.00",
+      "best_before": "Best before 9 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "fail",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "fail",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "juice_errR09.png": {
+    "product": "juice",
+    "injected_errors": [
+      "R09"
+    ],
+    "fields": {
+      "product": "juice",
+      "product_name": "Orange Fruit Drink",
+      "net_quantity": "1 L",
+      "veg_mark": "veg",
+      "ingredients": "Water, orange juice concentrate (10%), sugar, acidity regulator (330), preservative (223)",
+      "has_allergens": true,
+      "allergens": "Contains sulphite.",
+      "manufacturer": "Sunvale Beverages Pvt Ltd, 8 Industrial Area, Hubballi 580030",
+      "fssai_license": "1002401100078",
+      "mrp": "Rs. 110.00",
+      "best_before": "Best before 9 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "fail",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "fail",
+      "R10": "pass"
+    }
+  },
+  "juice_errR10.png": {
+    "product": "juice",
+    "injected_errors": [
+      "R10"
+    ],
+    "fields": {
+      "product": "juice",
+      "product_name": "Orange Fruit Drink",
+      "net_quantity": "1 L",
+      "veg_mark": "veg",
+      "ingredients": "Water, orange juice concentrate (10%), sugar, acidity regulator (330), preservative (223)",
+      "has_allergens": true,
+      "allergens": "Contains sulphite.",
+      "manufacturer": "Sunvale Beverages Pvt Ltd, 8 Industrial Area, Hubballi 580030",
+      "fssai_license": "10024011000789",
+      "mrp": "Rs. 110.00",
+      "best_before": ""
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "fail"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "fail"
+    },
+    "r10_removed": "best_before"
+  },
+  "masala_clean1.png": {
+    "product": "masala",
+    "injected_errors": [],
+    "fields": {
+      "product": "masala",
+      "product_name": "Garam Masala Powder",
+      "net_quantity": "100 g",
+      "veg_mark": "veg",
+      "ingredients": "Coriander, cumin, black pepper, cinnamon, cloves, cardamom, bay leaf, salt",
+      "has_allergens": true,
+      "allergens": "Contains mustard. May contain sesame.",
+      "manufacturer": "Spice Route Foods Pvt Ltd, 45 Market Street, Mysuru 570001",
+      "fssai_license": "11221999000456",
+      "mrp": "Rs. 75.00",
+      "best_before": "Best before 12 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "masala_clean2.png": {
+    "product": "masala",
+    "injected_errors": [],
+    "fields": {
+      "product": "masala",
+      "product_name": "Garam Masala Powder",
+      "net_quantity": "100 g",
+      "veg_mark": "veg",
+      "ingredients": "Coriander, cumin, black pepper, cinnamon, cloves, cardamom, bay leaf, salt",
+      "has_allergens": true,
+      "allergens": "Contains mustard. May contain sesame.",
+      "manufacturer": "Spice Route Foods Pvt Ltd, 45 Market Street, Mysuru 570001",
+      "fssai_license": "11221999000456",
+      "mrp": "Rs. 75.00",
+      "best_before": "Best before 12 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "masala_errR01.png": {
+    "product": "masala",
+    "injected_errors": [
+      "R01"
+    ],
+    "fields": {
+      "product": "masala",
+      "product_name": "Garam Masala Powder",
+      "net_quantity": "",
+      "veg_mark": "veg",
+      "ingredients": "Coriander, cumin, black pepper, cinnamon, cloves, cardamom, bay leaf, salt",
+      "has_allergens": true,
+      "allergens": "Contains mustard. May contain sesame.",
+      "manufacturer": "Spice Route Foods Pvt Ltd, 45 Market Street, Mysuru 570001",
+      "fssai_license": "11221999000456",
+      "mrp": "Rs. 75.00",
+      "best_before": "Best before 12 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "fail",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "fail",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "masala_errR02.png": {
+    "product": "masala",
+    "injected_errors": [
+      "R02"
+    ],
+    "fields": {
+      "product": "masala",
+      "product_name": "Garam Masala Powder",
+      "net_quantity": "10 g",
+      "veg_mark": "veg",
+      "ingredients": "Coriander, cumin, black pepper, cinnamon, cloves, cardamom, bay leaf, salt",
+      "has_allergens": true,
+      "allergens": "Contains mustard. May contain sesame.",
+      "manufacturer": "Spice Route Foods Pvt Ltd, 45 Market Street, Mysuru 570001",
+      "fssai_license": "11221999000456",
+      "mrp": "Rs. 75.00",
+      "best_before": "Best before 12 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "fail",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "fail",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "masala_errR03.png": {
+    "product": "masala",
+    "injected_errors": [
+      "R03"
+    ],
+    "fields": {
+      "product": "masala",
+      "product_name": "Garam Masala Powder",
+      "net_quantity": "100 gm",
+      "veg_mark": "veg",
+      "ingredients": "Coriander, cumin, black pepper, cinnamon, cloves, cardamom, bay leaf, salt",
+      "has_allergens": true,
+      "allergens": "Contains mustard. May contain sesame.",
+      "manufacturer": "Spice Route Foods Pvt Ltd, 45 Market Street, Mysuru 570001",
+      "fssai_license": "11221999000456",
+      "mrp": "Rs. 75.00",
+      "best_before": "Best before 12 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "fail",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "fail",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "masala_errR04.png": {
+    "product": "masala",
+    "injected_errors": [
+      "R04"
+    ],
+    "fields": {
+      "product": "masala",
+      "product_name": "Garam Masala Powder",
+      "net_quantity": "100 g",
+      "veg_mark": "",
+      "ingredients": "Coriander, cumin, black pepper, cinnamon, cloves, cardamom, bay leaf, salt",
+      "has_allergens": true,
+      "allergens": "Contains mustard. May contain sesame.",
+      "manufacturer": "Spice Route Foods Pvt Ltd, 45 Market Street, Mysuru 570001",
+      "fssai_license": "11221999000456",
+      "mrp": "Rs. 75.00",
+      "best_before": "Best before 12 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "fail",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "fail",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "masala_errR05.png": {
+    "product": "masala",
+    "injected_errors": [
+      "R05"
+    ],
+    "fields": {
+      "product": "masala",
+      "product_name": "Garam Masala Powder",
+      "net_quantity": "100 g",
+      "veg_mark": "veg",
+      "ingredients": "Coriander, cumin, black pepper, cinnamon, cloves, cardamom, bay leaf, salt",
+      "has_allergens": true,
+      "allergens": "",
+      "manufacturer": "Spice Route Foods Pvt Ltd, 45 Market Street, Mysuru 570001",
+      "fssai_license": "11221999000456",
+      "mrp": "Rs. 75.00",
+      "best_before": "Best before 12 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "fail",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "fail",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "masala_errR06.png": {
+    "product": "masala",
+    "injected_errors": [
+      "R06"
+    ],
+    "fields": {
+      "product": "masala",
+      "product_name": "Garam Masala Powder",
+      "net_quantity": "100 g",
+      "veg_mark": "veg",
+      "ingredients": "Coriander, cumin, black pepper, cinnamon, cloves, cardamom, bay leaf, salt",
+      "has_allergens": true,
+      "allergens": "Contains mustard.",
+      "manufacturer": "Spice Route Foods Pvt Ltd, 45 Market Street, Mysuru 570001",
+      "fssai_license": "11221999000456",
+      "mrp": "Rs. 75.00",
+      "best_before": "Best before 12 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "fail",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "fail",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "masala_errR07.png": {
+    "product": "masala",
+    "injected_errors": [
+      "R07"
+    ],
+    "fields": {
+      "product": "masala",
+      "product_name": "Garam Masala Powder",
+      "net_quantity": "100 g",
+      "veg_mark": "veg",
+      "ingredients": "Coriander, cumin, black pepper, cinnamon, cloves, bay leaf, salt",
+      "has_allergens": true,
+      "allergens": "Contains mustard. May contain sesame.",
+      "manufacturer": "Spice Route Foods Pvt Ltd, 45 Market Street, Mysuru 570001",
+      "fssai_license": "11221999000456",
+      "mrp": "Rs. 75.00",
+      "best_before": "Best before 12 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "fail",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "fail",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "masala_errR08.png": {
+    "product": "masala",
+    "injected_errors": [
+      "R08"
+    ],
+    "fields": {
+      "product": "masala",
+      "product_name": "Garam Masala Powder",
+      "net_quantity": "100 g",
+      "veg_mark": "veg",
+      "ingredients": "Coriander, cumin, black pepper, cinnamon, cloves, cardamom, bay leaf, salt",
+      "has_allergens": true,
+      "allergens": "Contains mustard. May contain sesame.",
+      "manufacturer": "",
+      "fssai_license": "11221999000456",
+      "mrp": "Rs. 75.00",
+      "best_before": "Best before 12 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "fail",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "fail",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "masala_errR09.png": {
+    "product": "masala",
+    "injected_errors": [
+      "R09"
+    ],
+    "fields": {
+      "product": "masala",
+      "product_name": "Garam Masala Powder",
+      "net_quantity": "100 g",
+      "veg_mark": "veg",
+      "ingredients": "Coriander, cumin, black pepper, cinnamon, cloves, cardamom, bay leaf, salt",
+      "has_allergens": true,
+      "allergens": "Contains mustard. May contain sesame.",
+      "manufacturer": "Spice Route Foods Pvt Ltd, 45 Market Street, Mysuru 570001",
+      "fssai_license": "1122199900045",
+      "mrp": "Rs. 75.00",
+      "best_before": "Best before 12 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "fail",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "fail",
+      "R10": "pass"
+    }
+  },
+  "masala_errR10.png": {
+    "product": "masala",
+    "injected_errors": [
+      "R10"
+    ],
+    "fields": {
+      "product": "masala",
+      "product_name": "Garam Masala Powder",
+      "net_quantity": "100 g",
+      "veg_mark": "veg",
+      "ingredients": "Coriander, cumin, black pepper, cinnamon, cloves, cardamom, bay leaf, salt",
+      "has_allergens": true,
+      "allergens": "Contains mustard. May contain sesame.",
+      "manufacturer": "Spice Route Foods Pvt Ltd, 45 Market Street, Mysuru 570001",
+      "fssai_license": "11221999000456",
+      "mrp": "",
+      "best_before": "Best before 12 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "fail"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "pass",
+      "R06": "pass",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "fail"
+    },
+    "r10_removed": "mrp"
+  },
+  "salt_clean1.png": {
+    "product": "salt",
+    "injected_errors": [],
+    "fields": {
+      "product": "salt",
+      "product_name": "Iodized Salt",
+      "net_quantity": "1 kg",
+      "veg_mark": "veg",
+      "ingredients": "Edible common salt, potassium iodate (iodine 15 ppm)",
+      "has_allergens": false,
+      "allergens": "",
+      "manufacturer": "Seashore Salts Pvt Ltd, 21 Harbour Road, Udupi 576101",
+      "fssai_license": "10019043000654",
+      "mrp": "Rs. 28.00",
+      "best_before": "Best before 24 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "n/a",
+      "R06": "n/a",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "n/a",
+      "R06": "n/a",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "salt_clean2.png": {
+    "product": "salt",
+    "injected_errors": [],
+    "fields": {
+      "product": "salt",
+      "product_name": "Iodized Salt",
+      "net_quantity": "1 kg",
+      "veg_mark": "veg",
+      "ingredients": "Edible common salt, potassium iodate (iodine 15 ppm)",
+      "has_allergens": false,
+      "allergens": "",
+      "manufacturer": "Seashore Salts Pvt Ltd, 21 Harbour Road, Udupi 576101",
+      "fssai_license": "10019043000654",
+      "mrp": "Rs. 28.00",
+      "best_before": "Best before 24 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "n/a",
+      "R06": "n/a",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "n/a",
+      "R06": "n/a",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "salt_errR01.png": {
+    "product": "salt",
+    "injected_errors": [
+      "R01"
+    ],
+    "fields": {
+      "product": "salt",
+      "product_name": "Iodized Salt",
+      "net_quantity": "",
+      "veg_mark": "veg",
+      "ingredients": "Edible common salt, potassium iodate (iodine 15 ppm)",
+      "has_allergens": false,
+      "allergens": "",
+      "manufacturer": "Seashore Salts Pvt Ltd, 21 Harbour Road, Udupi 576101",
+      "fssai_license": "10019043000654",
+      "mrp": "Rs. 28.00",
+      "best_before": "Best before 24 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "fail",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "n/a",
+      "R06": "n/a",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "fail",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "n/a",
+      "R06": "n/a",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "salt_errR02.png": {
+    "product": "salt",
+    "injected_errors": [
+      "R02"
+    ],
+    "fields": {
+      "product": "salt",
+      "product_name": "Iodized Salt",
+      "net_quantity": "2 kg",
+      "veg_mark": "veg",
+      "ingredients": "Edible common salt, potassium iodate (iodine 15 ppm)",
+      "has_allergens": false,
+      "allergens": "",
+      "manufacturer": "Seashore Salts Pvt Ltd, 21 Harbour Road, Udupi 576101",
+      "fssai_license": "10019043000654",
+      "mrp": "Rs. 28.00",
+      "best_before": "Best before 24 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "fail",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "n/a",
+      "R06": "n/a",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "fail",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "n/a",
+      "R06": "n/a",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "salt_errR03.png": {
+    "product": "salt",
+    "injected_errors": [
+      "R03"
+    ],
+    "fields": {
+      "product": "salt",
+      "product_name": "Iodized Salt",
+      "net_quantity": "1 KG",
+      "veg_mark": "veg",
+      "ingredients": "Edible common salt, potassium iodate (iodine 15 ppm)",
+      "has_allergens": false,
+      "allergens": "",
+      "manufacturer": "Seashore Salts Pvt Ltd, 21 Harbour Road, Udupi 576101",
+      "fssai_license": "10019043000654",
+      "mrp": "Rs. 28.00",
+      "best_before": "Best before 24 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "fail",
+      "R04": "pass",
+      "R05": "n/a",
+      "R06": "n/a",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "fail",
+      "R04": "pass",
+      "R05": "n/a",
+      "R06": "n/a",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "salt_errR04.png": {
+    "product": "salt",
+    "injected_errors": [
+      "R04"
+    ],
+    "fields": {
+      "product": "salt",
+      "product_name": "Iodized Salt",
+      "net_quantity": "1 kg",
+      "veg_mark": "",
+      "ingredients": "Edible common salt, potassium iodate (iodine 15 ppm)",
+      "has_allergens": false,
+      "allergens": "",
+      "manufacturer": "Seashore Salts Pvt Ltd, 21 Harbour Road, Udupi 576101",
+      "fssai_license": "10019043000654",
+      "mrp": "Rs. 28.00",
+      "best_before": "Best before 24 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "fail",
+      "R05": "n/a",
+      "R06": "n/a",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "fail",
+      "R05": "n/a",
+      "R06": "n/a",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "salt_errR07.png": {
+    "product": "salt",
+    "injected_errors": [
+      "R07"
+    ],
+    "fields": {
+      "product": "salt",
+      "product_name": "Iodized Salt",
+      "net_quantity": "1 kg",
+      "veg_mark": "veg",
+      "ingredients": "Edible common salt",
+      "has_allergens": false,
+      "allergens": "",
+      "manufacturer": "Seashore Salts Pvt Ltd, 21 Harbour Road, Udupi 576101",
+      "fssai_license": "10019043000654",
+      "mrp": "Rs. 28.00",
+      "best_before": "Best before 24 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "n/a",
+      "R06": "n/a",
+      "R07": "fail",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "n/a",
+      "R06": "n/a",
+      "R07": "fail",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "salt_errR08.png": {
+    "product": "salt",
+    "injected_errors": [
+      "R08"
+    ],
+    "fields": {
+      "product": "salt",
+      "product_name": "Iodized Salt",
+      "net_quantity": "1 kg",
+      "veg_mark": "veg",
+      "ingredients": "Edible common salt, potassium iodate (iodine 15 ppm)",
+      "has_allergens": false,
+      "allergens": "",
+      "manufacturer": "",
+      "fssai_license": "10019043000654",
+      "mrp": "Rs. 28.00",
+      "best_before": "Best before 24 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "n/a",
+      "R06": "n/a",
+      "R07": "pass",
+      "R08": "fail",
+      "R09": "pass",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "n/a",
+      "R06": "n/a",
+      "R07": "pass",
+      "R08": "fail",
+      "R09": "pass",
+      "R10": "pass"
+    }
+  },
+  "salt_errR09.png": {
+    "product": "salt",
+    "injected_errors": [
+      "R09"
+    ],
+    "fields": {
+      "product": "salt",
+      "product_name": "Iodized Salt",
+      "net_quantity": "1 kg",
+      "veg_mark": "veg",
+      "ingredients": "Edible common salt, potassium iodate (iodine 15 ppm)",
+      "has_allergens": false,
+      "allergens": "",
+      "manufacturer": "Seashore Salts Pvt Ltd, 21 Harbour Road, Udupi 576101",
+      "fssai_license": "1001904300065",
+      "mrp": "Rs. 28.00",
+      "best_before": "Best before 24 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "n/a",
+      "R06": "n/a",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "fail",
+      "R10": "pass"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "n/a",
+      "R06": "n/a",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "fail",
+      "R10": "pass"
+    }
+  },
+  "salt_errR10.png": {
+    "product": "salt",
+    "injected_errors": [
+      "R10"
+    ],
+    "fields": {
+      "product": "salt",
+      "product_name": "Iodized Salt",
+      "net_quantity": "1 kg",
+      "veg_mark": "veg",
+      "ingredients": "Edible common salt, potassium iodate (iodine 15 ppm)",
+      "has_allergens": false,
+      "allergens": "",
+      "manufacturer": "Seashore Salts Pvt Ltd, 21 Harbour Road, Udupi 576101",
+      "fssai_license": "10019043000654",
+      "mrp": "",
+      "best_before": "Best before 24 months from date of packing"
+    },
+    "verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "n/a",
+      "R06": "n/a",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "fail"
+    },
+    "expected_verdicts": {
+      "R01": "pass",
+      "R02": "pass",
+      "R03": "pass",
+      "R04": "pass",
+      "R05": "n/a",
+      "R06": "n/a",
+      "R07": "pass",
+      "R08": "pass",
+      "R09": "pass",
+      "R10": "fail"
+    },
+    "r10_removed": "mrp"
+  }
+}
