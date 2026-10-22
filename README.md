@@ -147,6 +147,11 @@ pip install -r requirements.txt
 echo ANTHROPIC_API_KEY=your_api_key_here > .env
 ```
 
+### Launch Interactive Web Prototype (Streamlit)
+```bash
+streamlit run app.py
+```
+
 ### Run Pipeline Demo
 ```bash
 python run_demo.py
@@ -194,6 +199,7 @@ esko-checker/
 │   ├── test_checks.py       # Deterministic rule engine unit tests
 │   ├── test_ocr.py          # OCR extraction tests
 │   └── test_evaluate.py     # Evaluation metrics and parsing tests
+├── app.py                   # Interactive Streamlit web application prototype
 ├── checks.py                # FSSAI compliance verification engine (R01-R10)
 ├── extract_vision.py        # Vision extraction module using Claude Sonnet
 ├── pipeline.py              # Pipeline coordinator with disk caching
