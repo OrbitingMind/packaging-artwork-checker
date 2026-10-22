@@ -137,7 +137,7 @@ def extract_fields(image_path: str) -> dict:
         messages=messages,
     )
 
-    raw_text = response.content[0].text
+    raw_text = next((b.text for b in response.content if hasattr(b, "text")), "")
     try:
         data = json.loads(_clean_json_str(raw_text))
     except (json.JSONDecodeError, ValueError):
@@ -153,6 +153,7 @@ def extract_fields(image_path: str) -> dict:
             max_tokens=1024,
             messages=retry_messages,
         )
-        data = json.loads(_clean_json_str(retry_response.content[0].text))
+        retry_text = next((b.text for b in retry_response.content if hasattr(b, "text")), "")
+        data = json.loads(_clean_json_str(retry_text))
 
     return _normalize_extracted(data)

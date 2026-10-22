@@ -1,0 +1,35 @@
+{
+  "veg_mark_present": true,
+  "product_name": {
+    "value": "Crunchy Oat Biscuits",
+    "confidence": 0.99
+  },
+  "net_quantity": {
+    "value": "",
+    "confidence": 0.97
+  },
+  "ingredients": {
+    "value": "Wheat flour, oats, sugar, palm oil, invert syrup, salt, raising agents",
+    "confidence": 0.98
+  },
+  "allergen_statement": {
+    "value": "Contains wheat, oats. May contain milk.",
+    "confidence": 0.98
+  },
+  "manufacturer": {
+    "value": "Golden Crust Foods Pvt Ltd, 12 MG Road, Bengaluru 560001",
+    "confidence": 0.98
+  },
+  "fssai_license": {
+    "value": "10020042001234",
+    "confidence": 0.98
+  },
+  "mrp": {
+    "value": "Rs. 40.00",
+    "confidence": 0.99
+  },
+  "best_before": {
+    "value": "Best before 6 months from date of packing",
+    "confidence": 0.97
+  }
+}
