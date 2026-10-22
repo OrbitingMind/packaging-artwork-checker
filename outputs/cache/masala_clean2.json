@@ -1,0 +1,35 @@
+{
+  "veg_mark_present": true,
+  "product_name": {
+    "value": "Garam Masala Powder",
+    "confidence": 0.99
+  },
+  "net_quantity": {
+    "value": "100 g",
+    "confidence": 0.99
+  },
+  "ingredients": {
+    "value": "Coriander, cumin, black pepper, cinnamon, cloves, cardamom, bay leaf, salt",
+    "confidence": 0.98
+  },
+  "allergen_statement": {
+    "value": "Contains mustard. May contain sesame.",
+    "confidence": 0.98
+  },
+  "manufacturer": {
+    "value": "Spice Route Foods Pvt Ltd, 45 Market Street, Mysuru 570001",
+    "confidence": 0.98
+  },
+  "fssai_license": {
+    "value": "11221999000456",
+    "confidence": 0.97
+  },
+  "mrp": {
+    "value": "Rs. 75.00",
+    "confidence": 0.99
+  },
+  "best_before": {
+    "value": "12 months from date of packing",
+    "confidence": 0.98
+  }
+}

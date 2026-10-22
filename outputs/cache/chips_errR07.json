@@ -1,0 +1,35 @@
+{
+  "veg_mark_present": true,
+  "product_name": {
+    "value": "Masala Potato Chips",
+    "confidence": 0.99
+  },
+  "net_quantity": {
+    "value": "52 g",
+    "confidence": 0.98
+  },
+  "ingredients": {
+    "value": "Potato, edible vegetable oil (palm), spices and condiments, salt",
+    "confidence": 0.98
+  },
+  "allergen_statement": {
+    "value": "Contains milk. May contain wheat and soy.",
+    "confidence": 0.98
+  },
+  "manufacturer": {
+    "value": "Crispo Snacks Pvt Ltd, 3 Ring Road, Mangaluru 575001",
+    "confidence": 0.98
+  },
+  "fssai_license": {
+    "value": "12122008000321",
+    "confidence": 0.97
+  },
+  "mrp": {
+    "value": "Rs. 20.00",
+    "confidence": 0.98
+  },
+  "best_before": {
+    "value": "4 months from date of packing",
+    "confidence": 0.98
+  }
+}
