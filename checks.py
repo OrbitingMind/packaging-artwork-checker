@@ -29,6 +29,21 @@ def _apply_confidence_threshold(verdict: str, conf: float, reason: str) -> Tuple
     return verdict, reason
 
 
+def _split_and_normalize_ingredients(text: str) -> List[str]:
+    """
+    Splits ingredients string on commas and normalizes each item:
+    lowercase, trimmed, with trailing punctuation removed.
+    """
+    if not text:
+        return []
+    items: List[str] = []
+    for part in text.split(","):
+        cleaned = part.strip().lower().rstrip(".;:!?,-").strip()
+        if cleaned:
+            items.append(cleaned)
+    return items
+
+
 def check_rules(
     extracted: Dict[str, Any],
     spec: Dict[str, Any],
@@ -63,8 +78,8 @@ def check_rules(
 
     # R02: Normalized equality with spec (numerical quantity matches spec)
     if not net_val:
-        r02_v = "FAIL"
-        r02_r = "Net quantity is missing"
+        r02_v = "N/A"
+        r02_r = "net quantity missing, see R01"
     else:
         net_nums = re.findall(r"\d+(?:\.\d+)?", net_val)
         spec_nums = re.findall(r"\d+(?:\.\d+)?", str(spec_net))
@@ -86,8 +101,8 @@ def check_rules(
     # R03: Unit regex (g, kg, mg, ml, l)
     unit_match = re.search(r"(?<=[0-9\s])(g|kg|mg|ml|[lL])\s*$", net_val) if net_val else None
     if not net_val:
-        r03_v = "FAIL"
-        r03_r = "Net quantity is missing"
+        r03_v = "N/A"
+        r03_r = "net quantity missing, see R01"
     elif unit_match:
         r03_v = "PASS"
         r03_r = f"Net quantity unit '{unit_match.group(1)}' conforms to legal metrology standards"
@@ -174,25 +189,63 @@ def check_rules(
         "reason": r06_r,
     })
 
-    # R07: Ingredients similarity with difflib (>=0.95 PASS, 0.80-0.95 NEEDS_REVIEW, below FAIL)
+    # R07: Split ingredients on commas, normalize, match one-to-one using ratio >= 0.9
     ing_val, ing_conf = _get_val_conf(extracted, "ingredients")
     spec_ing = spec.get("ingredients", "")
-    if not ing_val:
+
+    spec_items = _split_and_normalize_ingredients(spec_ing)
+    found_items = _split_and_normalize_ingredients(ing_val)
+
+    if not found_items:
         r07_v = "FAIL"
-        r07_r = "Ingredients list is missing"
+        r07_r = f"Missing ingredient(s): {', '.join(spec_items)}" if spec_items else "Ingredients list is missing"
     else:
-        norm_ing = " ".join(ing_val.lower().split())
-        norm_spec_ing = " ".join(spec_ing.lower().split())
-        ratio = SequenceMatcher(None, norm_ing, norm_spec_ing).ratio()
-        if ratio >= 0.95:
+        # Check if same items in same order
+        same_order = False
+        if len(spec_items) == len(found_items):
+            same_order = all(
+                SequenceMatcher(None, s, f).ratio() >= 0.9
+                for s, f in zip(spec_items, found_items)
+            )
+
+        if same_order:
             r07_v = "PASS"
-            r07_r = f"Ingredients match specification (similarity: {ratio:.2f})"
-        elif ratio >= 0.80:
-            r07_v = "NEEDS_REVIEW"
-            r07_r = f"Ingredients similarity is borderline (similarity: {ratio:.2f})"
+            r07_r = "Ingredients match specification in declared order"
         else:
-            r07_v = "FAIL"
-            r07_r = f"Ingredients differ significantly from specification (similarity: {ratio:.2f})"
+            # One-to-one bipartite matching using SequenceMatcher ratio >= 0.9
+            candidates = []
+            for i, s in enumerate(spec_items):
+                for j, f in enumerate(found_items):
+                    ratio = SequenceMatcher(None, s, f).ratio()
+                    if ratio >= 0.9:
+                        candidates.append((ratio, i, j))
+
+            # Greedily match pairs with highest similarity ratio first
+            candidates.sort(key=lambda x: x[0], reverse=True)
+
+            matched_spec = set()
+            matched_found = set()
+            for _, i, j in candidates:
+                if i not in matched_spec and j not in matched_found:
+                    matched_spec.add(i)
+                    matched_found.add(j)
+
+            missing = [spec_items[i] for i in range(len(spec_items)) if i not in matched_spec]
+            extra = [found_items[j] for j in range(len(found_items)) if j not in matched_found]
+
+            if not missing and not extra:
+                # All items matched one-to-one, but not in same order
+                r07_v = "NEEDS_REVIEW"
+                r07_r = "Ingredients match specification but in a different order"
+            else:
+                r07_v = "FAIL"
+                parts = []
+                if missing:
+                    parts.append(f"Missing ingredient(s): {', '.join(missing)}")
+                if extra:
+                    parts.append(f"Extra ingredient(s): {', '.join(extra)}")
+                r07_r = "; ".join(parts)
+
     r07_v, r07_r = _apply_confidence_threshold(r07_v, ing_conf, r07_r)
     findings.append({
         "rule_id": "R07",

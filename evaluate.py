@@ -153,6 +153,7 @@ def evaluate_split(split_name: str = "dev") -> Dict[str, Any]:
 
     wrong_predictions: List[Dict[str, Any]] = []
     failed_images: List[Dict[str, str]] = []
+    rules_excluded_na = 0
 
     print(f"\nRunning evaluation on split '{split_name}' ({len(target_images)} images)...")
 
@@ -190,6 +191,11 @@ def evaluate_split(split_name: str = "dev") -> Dict[str, Any]:
 
             pred_verdict = str(finding.get("verdict", "")).strip().upper()
             found_val = finding.get("found", "")
+
+            # Exclude rules predicted N/A from metrics (e.g. R02/R03 when net quantity missing)
+            if pred_verdict == "N/A":
+                rules_excluded_na += 1
+                continue
 
             # Classify prediction into confusion matrix category
             cls = ""
@@ -267,6 +273,7 @@ def evaluate_split(split_name: str = "dev") -> Dict[str, Any]:
         "images_total": len(target_images),
         "images_evaluated": len(target_images) - len(failed_images),
         "images_failed": len(failed_images),
+        "rules_excluded_na": rules_excluded_na,
         "failed_images": failed_images,
         "overall": overall_metrics,
         "per_rule": per_rule_metrics,
@@ -298,6 +305,7 @@ def print_evaluation_report(result: Dict[str, Any]) -> None:
     print(f"Images Total     : {result['images_total']}")
     print(f"Images Evaluated : {result['images_evaluated']}")
     print(f"Images Failed    : {result['images_failed']}")
+    print(f"Rules Excluded NA: {result.get('rules_excluded_na', 0)} (predicted N/A, e.g. R02/R03 when net quantity missing)")
 
     # Overall Summary
     print("\n" + "-" * 90)
@@ -394,6 +402,7 @@ def generate_markdown_report(result: Dict[str, Any]) -> str:
         "",
         f"- **Images Evaluated**: {result['images_evaluated']} / {result['images_total']}",
         f"- **Images Failed**: {result['images_failed']}",
+        f"- **Rules Excluded (Predicted N/A)**: {result.get('rules_excluded_na', 0)}",
         "",
         "## Overall Summary",
         "",
@@ -404,6 +413,7 @@ def generate_markdown_report(result: Dict[str, Any]) -> str:
     overall_alignments = ["left", "right", "left"]
     overall_rows = [
         ["Total Rule Evaluations", str(overall["total"]), "Excludes skipped 'n/a' rules"],
+        ["Rules Excluded (Predicted N/A)", str(result.get("rules_excluded_na", 0)), "Excluded from metrics (e.g. R02/R03 when net quantity missing)"],
         ["True Positives (TP)", str(overall["tp"]), "Expected fail, predicted FAIL"],
         ["False Negatives (FN)", str(overall["fn"]), "Expected fail, predicted PASS (missed defect)"],
         ["Caught for Review", str(overall["caught"]), "Expected fail, predicted NEEDS_REVIEW"],

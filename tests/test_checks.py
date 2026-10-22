@@ -171,3 +171,63 @@ def test_low_confidence_triggers_needs_review():
     r09 = _find_rule(findings, "R09")
     assert r09 is not None
     assert r09["verdict"] == "NEEDS_REVIEW"
+
+
+def test_r02_r03_na_when_net_quantity_empty():
+    """R02 and R03 return N/A with reason 'net quantity missing, see R01' when net_quantity is empty."""
+    extracted = _make_sample_extracted({"net_quantity": {"value": "", "confidence": 0.95}})
+    findings = check_rules(extracted, BISCUIT_SPEC)
+    r01 = _find_rule(findings, "R01")
+    r02 = _find_rule(findings, "R02")
+    r03 = _find_rule(findings, "R03")
+    assert r01["verdict"] == "FAIL"
+    assert r02["verdict"] == "N/A"
+    assert r02["reason"] == "net quantity missing, see R01"
+    assert r03["verdict"] == "N/A"
+    assert r03["reason"] == "net quantity missing, see R01"
+
+
+def test_r07_pass_case():
+    """R07 PASS: Same items in same order."""
+    extracted = _make_sample_extracted({
+        "ingredients": {
+            "value": "Wheat flour, oats, sugar, palm oil, invert syrup, salt, raising agents",
+            "confidence": 0.98,
+        }
+    })
+    findings = check_rules(extracted, BISCUIT_SPEC)
+    r07 = _find_rule(findings, "R07")
+    assert r07 is not None
+    assert r07["verdict"] == "PASS"
+    assert "declared order" in r07["reason"]
+
+
+def test_r07_fail_one_item_removed():
+    """R07 FAIL: One item removed from spec (e.g. oats removed)."""
+    extracted = _make_sample_extracted({
+        "ingredients": {
+            "value": "Wheat flour, sugar, palm oil, invert syrup, salt, raising agents",
+            "confidence": 0.98,
+        }
+    })
+    findings = check_rules(extracted, BISCUIT_SPEC)
+    r07 = _find_rule(findings, "R07")
+    assert r07 is not None
+    assert r07["verdict"] == "FAIL"
+    assert "Missing ingredient(s): oats" in r07["reason"]
+
+
+def test_r07_needs_review_reordered():
+    """R07 NEEDS_REVIEW: Same items present, but in a different order."""
+    extracted = _make_sample_extracted({
+        "ingredients": {
+            "value": "oats, Wheat flour, sugar, palm oil, invert syrup, salt, raising agents",
+            "confidence": 0.98,
+        }
+    })
+    findings = check_rules(extracted, BISCUIT_SPEC)
+    r07 = _find_rule(findings, "R07")
+    assert r07 is not None
+    assert r07["verdict"] == "NEEDS_REVIEW"
+    assert "different order" in r07["reason"]
+

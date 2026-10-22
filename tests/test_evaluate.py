@@ -96,7 +96,8 @@ def test_evaluate_dev_split_runs():
     assert "recall_with_review" in overall
     assert "false_alarm_rate" in overall
     assert "review_rate" in overall
-    assert overall["total"] == 232
+    assert result["rules_excluded_na"] == 6
+    assert overall["total"] == 226
 
     # Check per-rule covers R01-R10
     per_rule = result["per_rule"]
