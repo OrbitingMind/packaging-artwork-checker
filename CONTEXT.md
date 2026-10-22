@@ -16,8 +16,8 @@ R03 correct unit, R04 veg mark present, R05 allergen section present,
 R06 allergens match spec, R07 ingredients match spec,
 R08 manufacturer name and address present, R09 FSSAI number is
 14 digits, R10 MRP and best-before present.
-CURRENT STATE: Dataset done: 58 images in dataset/images,
-answer_key.json, split.json, generate_dataset.py, specs in
+rules.yaml and loader done and committed. Next: environment setup
+(Python 3.12 venv, requirements, .env), then extract.py.
 dataset/specs. Next: rules.yaml.
 MY LEVEL: Strong in C++/DSA, learning Python. Explain Python-specific
 parts briefly and comment the code.

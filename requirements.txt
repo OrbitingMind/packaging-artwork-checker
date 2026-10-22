@@ -1,0 +1,8 @@
+pyyaml
+pytest
+pillow
+python-dotenv
+anthropic
+easyocr
+streamlit
+opencv-python-headless
