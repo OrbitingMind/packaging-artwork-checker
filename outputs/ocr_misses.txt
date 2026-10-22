@@ -1,0 +1,206 @@
+======================================================================
+OCR MISS DIAGNOSIS REPORT (Dev Set: net_quantity & mrp)
+======================================================================
+
+Image: biscuit_errR01.png
+Product: biscuit
+Field: mrp
+Expected: Rs. 40.00
+Top 3 Similar OCR Lines (difflib.SequenceMatcher):
+  1. "40.00" (similarity: 0.714, confidence: 1.000)
+  2. "560001" (similarity: 0.267, confidence: 1.000)
+  3. "FSSAI Lic. No.=" (similarity: 0.250, confidence: 0.459)
+
+Image: biscuit_errR04.png
+Product: biscuit
+Field: mrp
+Expected: Rs. 40.00
+Top 3 Similar OCR Lines (difflib.SequenceMatcher):
+  1. "40.00" (similarity: 0.714, confidence: 1.000)
+  2. "200 g" (similarity: 0.286, confidence: 0.892)
+  3. "560001" (similarity: 0.267, confidence: 1.000)
+
+Image: biscuit_errR06.png
+Product: biscuit
+Field: mrp
+Expected: Rs. 40.00
+Top 3 Similar OCR Lines (difflib.SequenceMatcher):
+  1. "40.00" (similarity: 0.714, confidence: 1.000)
+  2. "200 g" (similarity: 0.286, confidence: 0.892)
+  3. "560001" (similarity: 0.267, confidence: 1.000)
+
+Image: biscuit_errR07.png
+Product: biscuit
+Field: mrp
+Expected: Rs. 40.00
+Top 3 Similar OCR Lines (difflib.SequenceMatcher):
+  1. "40.00" (similarity: 0.714, confidence: 1.000)
+  2. "560001" (similarity: 0.267, confidence: 1.000)
+  3. "Net Qty: 200 g" (similarity: 0.261, confidence: 0.999)
+
+Image: biscuit_errR08.png
+Product: biscuit
+Field: mrp
+Expected: Rs. 40.00
+Top 3 Similar OCR Lines (difflib.SequenceMatcher):
+  1. "40.00" (similarity: 0.714, confidence: 1.000)
+  2. "200 g" (similarity: 0.286, confidence: 0.892)
+  3. "MRP: Rs_" (similarity: 0.235, confidence: 0.740)
+
+Image: chips_errR01.png
+Product: chips
+Field: mrp
+Expected: Rs. 20.00
+Top 3 Similar OCR Lines (difflib.SequenceMatcher):
+  1. "20.00" (similarity: 0.714, confidence: 1.000)
+  2. "FSSAI Lic. No:: 12122008000321" (similarity: 0.308, confidence: 0.719)
+  3. "MRP: Rs_" (similarity: 0.235, confidence: 0.866)
+
+Image: chips_errR04.png
+Product: chips
+Field: mrp
+Expected: Rs. 20.00
+Top 3 Similar OCR Lines (difflib.SequenceMatcher):
+  1. "20.00" (similarity: 0.714, confidence: 1.000)
+  2. "No:: 12122008000321" (similarity: 0.357, confidence: 0.607)
+  3. "MRP: Rs_" (similarity: 0.235, confidence: 0.886)
+
+Image: chips_errR06.png
+Product: chips
+Field: mrp
+Expected: Rs. 20.00
+Top 3 Similar OCR Lines (difflib.SequenceMatcher):
+  1. "20.00" (similarity: 0.714, confidence: 1.000)
+  2. "No:: 12122008000321" (similarity: 0.357, confidence: 0.607)
+  3. "MRP: Rs_" (similarity: 0.235, confidence: 0.886)
+
+Image: chips_errR08.png
+Product: chips
+Field: mrp
+Expected: Rs. 20.00
+Top 3 Similar OCR Lines (difflib.SequenceMatcher):
+  1. "20.00" (similarity: 0.714, confidence: 1.000)
+  2. "FSSAI Lic. No:: 12122008000321" (similarity: 0.308, confidence: 0.719)
+  3. "MRP: Rs_" (similarity: 0.235, confidence: 0.866)
+
+Image: chips_errR09.png
+Product: chips
+Field: mrp
+Expected: Rs. 20.00
+Top 3 Similar OCR Lines (difflib.SequenceMatcher):
+  1. "20.00" (similarity: 0.714, confidence: 1.000)
+  2. "No:: 1212200800032" (similarity: 0.370, confidence: 0.809)
+  3. "MRP: Rs_" (similarity: 0.235, confidence: 0.886)
+
+Image: juice_errR01.png
+Product: juice
+Field: mrp
+Expected: Rs. 110.00
+Top 3 Similar OCR Lines (difflib.SequenceMatcher):
+  1. "110.00" (similarity: 0.750, confidence: 1.000)
+  2. "FSSAI Lic. No:: 10024011000789" (similarity: 0.350, confidence: 0.892)
+  3. "580030" (similarity: 0.250, confidence: 0.908)
+
+Image: juice_errR04.png
+Product: juice
+Field: net_quantity
+Expected: 1 L
+Top 3 Similar OCR Lines (difflib.SequenceMatcher):
+  1. "110.00" (similarity: 0.222, confidence: 1.000)
+  2. "FSSAI Lic. No.-" (similarity: 0.222, confidence: 0.551)
+  3. "Net Qty:" (similarity: 0.182, confidence: 1.000)
+
+Image: juice_errR04.png
+Product: juice
+Field: mrp
+Expected: Rs. 110.00
+Top 3 Similar OCR Lines (difflib.SequenceMatcher):
+  1. "110.00" (similarity: 0.750, confidence: 1.000)
+  2. "10024011000789" (similarity: 0.417, confidence: 0.997)
+  3. "580030" (similarity: 0.250, confidence: 0.896)
+
+Image: juice_errR07.png
+Product: juice
+Field: net_quantity
+Expected: 1 L
+Top 3 Similar OCR Lines (difflib.SequenceMatcher):
+  1. "110.00" (similarity: 0.222, confidence: 1.000)
+  2. "FSSAI Lic. No.-" (similarity: 0.222, confidence: 0.551)
+  3. "Net Qty:" (similarity: 0.182, confidence: 1.000)
+
+Image: juice_errR07.png
+Product: juice
+Field: mrp
+Expected: Rs. 110.00
+Top 3 Similar OCR Lines (difflib.SequenceMatcher):
+  1. "110.00" (similarity: 0.750, confidence: 1.000)
+  2. "10024011000789" (similarity: 0.417, confidence: 0.997)
+  3. "580030" (similarity: 0.250, confidence: 0.896)
+
+Image: juice_errR09.png
+Product: juice
+Field: net_quantity
+Expected: 1 L
+Top 3 Similar OCR Lines (difflib.SequenceMatcher):
+  1. "110.00" (similarity: 0.222, confidence: 1.000)
+  2. "FSSAI Lic. No.-" (similarity: 0.222, confidence: 0.551)
+  3. "Net Qty:" (similarity: 0.182, confidence: 1.000)
+
+Image: juice_errR09.png
+Product: juice
+Field: mrp
+Expected: Rs. 110.00
+Top 3 Similar OCR Lines (difflib.SequenceMatcher):
+  1. "110.00" (similarity: 0.750, confidence: 1.000)
+  2. "1002401100078" (similarity: 0.435, confidence: 0.727)
+  3. "580030" (similarity: 0.250, confidence: 0.896)
+
+Image: juice_errR10.png
+Product: juice
+Field: net_quantity
+Expected: 1 L
+Top 3 Similar OCR Lines (difflib.SequenceMatcher):
+  1. "FSSAI Lic. No.-" (similarity: 0.222, confidence: 0.551)
+  2. "Net Qty:" (similarity: 0.182, confidence: 1.000)
+  3. "10024011000789" (similarity: 0.118, confidence: 0.816)
+
+Image: salt_errR04.png
+Product: salt
+Field: net_quantity
+Expected: 1 kg
+Top 3 Similar OCR Lines (difflib.SequenceMatcher):
+  1. "kg" (similarity: 0.667, confidence: 0.999)
+  2. "Best before 24 months from date of packing" (similarity: 0.130, confidence: 0.957)
+  3. "lodized Salt" (similarity: 0.125, confidence: 0.959)
+
+Image: salt_errR08.png
+Product: salt
+Field: net_quantity
+Expected: 1 kg
+Top 3 Similar OCR Lines (difflib.SequenceMatcher):
+  1. "kg" (similarity: 0.667, confidence: 0.999)
+  2. "Net Qty:" (similarity: 0.167, confidence: 1.000)
+  3. "Best before 24 months from date of packing" (similarity: 0.130, confidence: 0.959)
+
+Image: salt_errR10.png
+Product: salt
+Field: net_quantity
+Expected: 1 kg
+Top 3 Similar OCR Lines (difflib.SequenceMatcher):
+  1. "kg" (similarity: 0.667, confidence: 0.999)
+  2. "Best before 24 months from date of packing" (similarity: 0.130, confidence: 0.959)
+  3. "lodized Salt" (similarity: 0.125, confidence: 0.959)
+
+======================================================================
+SUMMARY: Misses Per Product
+======================================================================
+Product              Misses    
+----------------------------------------------------------------------
+biscuit              5         
+chips                5         
+juice                8         
+masala               0         
+salt                 3         
+----------------------------------------------------------------------
+Total Misses         21        
+======================================================================
