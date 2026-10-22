@@ -14,6 +14,15 @@ MODEL = "claude-sonnet-5-5"
 load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"))
 api_key = os.environ.get("ANTHROPIC_API_KEY")
 
+# Fallback to Streamlit secrets if running in Streamlit Cloud
+if not api_key:
+    try:
+        import streamlit as st
+        if hasattr(st, "secrets") and "ANTHROPIC_API_KEY" in st.secrets:
+            api_key = st.secrets["ANTHROPIC_API_KEY"]
+    except Exception:
+        pass
+
 TEXT_FIELDS = [
     "product_name",
     "net_quantity",
@@ -114,7 +123,16 @@ def extract_fields(image_path: str) -> dict:
     with open(image_path, "rb") as f:
         img_b64 = base64.b64encode(f.read()).decode("utf-8")
 
-    client = anthropic.Anthropic(api_key=api_key)
+    active_key = api_key or os.environ.get("ANTHROPIC_API_KEY")
+    if not active_key:
+        try:
+            import streamlit as st
+            if hasattr(st, "secrets") and "ANTHROPIC_API_KEY" in st.secrets:
+                active_key = st.secrets["ANTHROPIC_API_KEY"]
+        except Exception:
+            pass
+
+    client = anthropic.Anthropic(api_key=active_key)
 
     messages = [{
         "role": "user",
