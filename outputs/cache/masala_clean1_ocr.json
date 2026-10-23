@@ -1,0 +1,152 @@
+[
+  {
+    "text": "Garam Masala Powder",
+    "bbox": [
+      129,
+      302,
+      521,
+      346
+    ],
+    "confidence": 0.9733287255874662
+  },
+  {
+    "text": "Net",
+    "bbox": [
+      130,
+      384,
+      174,
+      410
+    ],
+    "confidence": 0.9999988299663297
+  },
+  {
+    "text": "100 g",
+    "bbox": [
+      230,
+      384,
+      292,
+      414
+    ],
+    "confidence": 0.9799676242652047
+  },
+  {
+    "text": "Ingredients: Coriander,",
+    "bbox": [
+      126,
+      432,
+      385,
+      468
+    ],
+    "confidence": 0.9645072866209028
+  },
+  {
+    "text": "cumin; black pepper, cinnamon, cloves, cardamom",
+    "bbox": [
+      390,
+      437,
+      932,
+      470
+    ],
+    "confidence": 0.7334221011952033
+  },
+  {
+    "text": "bay leaf",
+    "bbox": [
+      126,
+      470,
+      218,
+      501
+    ],
+    "confidence": 0.9654335111030317
+  },
+  {
+    "text": "salt",
+    "bbox": [
+      224,
+      472,
+      270,
+      496
+    ],
+    "confidence": 0.9994925260543823
+  },
+  {
+    "text": "Allergen Information: Contains mustard. May contain sesame_",
+    "bbox": [
+      127,
+      520,
+      804,
+      553
+    ],
+    "confidence": 0.8105986189133697
+  },
+  {
+    "text": "Manufactured by: Spice Route Foods Pvt Ltd; 45 Market Street, Mysuru",
+    "bbox": [
+      130,
+      574,
+      908,
+      606
+    ],
+    "confidence": 0.5994076009511786
+  },
+  {
+    "text": "570001",
+    "bbox": [
+      128,
+      608,
+      212,
+      636
+    ],
+    "confidence": 0.9999988806591199
+  },
+  {
+    "text": "FSSAI Lic. No.-",
+    "bbox": [
+      128,
+      660,
+      300,
+      686
+    ],
+    "confidence": 0.6387127924393725
+  },
+  {
+    "text": "11221999000456",
+    "bbox": [
+      309,
+      659,
+      499,
+      687
+    ],
+    "confidence": 0.9999940103000976
+  },
+  {
+    "text": "MRP: Rs. 75.00",
+    "bbox": [
+      130,
+      712,
+      304,
+      740
+    ],
+    "confidence": 0.9525447392406967
+  },
+  {
+    "text": "Best before 12 months from date of packing",
+    "bbox": [
+      128,
+      764,
+      607,
+      795
+    ],
+    "confidence": 0.7239621464318958
+  },
+  {
+    "text": "Qty:",
+    "bbox": [
+      170,
+      381,
+      229,
+      417
+    ],
+    "confidence": 0.5587079158668875
+  }
+]

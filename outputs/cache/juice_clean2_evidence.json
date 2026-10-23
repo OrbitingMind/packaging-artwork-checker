@@ -1,0 +1,172 @@
+[
+  {
+    "bbox": [
+      128,
+      378,
+      242,
+      404
+    ],
+    "kind": "found",
+    "label": "Net quantity: 1 L",
+    "rule_id": "R01",
+    "rule_name": "Net quantity present",
+    "verdict": "PASS",
+    "found": "1 L",
+    "expected": "1 L",
+    "reason": "Net quantity '1 L' is present",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      128,
+      378,
+      242,
+      404
+    ],
+    "kind": "found",
+    "label": "Net quantity: 1 L",
+    "rule_id": "R02",
+    "rule_name": "Net quantity matches spec",
+    "verdict": "PASS",
+    "found": "1 L",
+    "expected": "1 L",
+    "reason": "Net quantity numerical value '1' matches spec '1'",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      128,
+      378,
+      242,
+      404
+    ],
+    "kind": "found",
+    "label": "Net quantity unit: 1 L",
+    "rule_id": "R03",
+    "rule_name": "Correct unit",
+    "verdict": "PASS",
+    "found": "1 L",
+    "expected": "Approved unit (g, kg, mg, ml, l)",
+    "reason": "Net quantity unit 'L' conforms to legal metrology standards",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      129,
+      504,
+      494,
+      533
+    ],
+    "kind": "found",
+    "label": "Allergen statement",
+    "rule_id": "R05",
+    "rule_name": "Allergen section present",
+    "verdict": "PASS",
+    "found": "Contains sulphite.",
+    "expected": "Contains sulphite.",
+    "reason": "Allergen statement is present: 'Contains sulphite.'",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      129,
+      504,
+      494,
+      533
+    ],
+    "kind": "found",
+    "label": "Allergen declaration",
+    "rule_id": "R06",
+    "rule_name": "Allergens match spec",
+    "verdict": "PASS",
+    "found": "Contains sulphite.",
+    "expected": "sulphite",
+    "reason": "All spec allergens (sulphite) declared on packaging",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      126,
+      424,
+      874,
+      484
+    ],
+    "kind": "found",
+    "label": "Ingredients list",
+    "rule_id": "R07",
+    "rule_name": "Ingredients match spec",
+    "verdict": "PASS",
+    "found": "Water, orange juice concentrate (10%), sugar, acidity regulator (330), preservative (223)",
+    "expected": "Water, orange juice concentrate (10%), sugar, acidity regulator (330), preservative (223)",
+    "reason": "Ingredients match specification in declared order",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      130,
+      554,
+      858,
+      582
+    ],
+    "kind": "found",
+    "label": "Manufacturer details",
+    "rule_id": "R08",
+    "rule_name": "Manufacturer name and address present",
+    "verdict": "PASS",
+    "found": "Sunvale Beverages Pvt Ltd, 8 Industrial Area, Hubballi 580030",
+    "expected": "Sunvale Beverages Pvt Ltd, 8 Industrial Area, Hubballi 580030",
+    "reason": "Manufacturer name and address present (similarity: 1.00)",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      260,
+      604,
+      418,
+      628
+    ],
+    "kind": "found",
+    "label": "FSSAI license: 10024011000789",
+    "rule_id": "R09",
+    "rule_name": "FSSAI number is 14 digits",
+    "verdict": "PASS",
+    "found": "10024011000789",
+    "expected": "10024011000789",
+    "reason": "FSSAI license number contains exactly 14 digits: '10024011000789'",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      131,
+      655,
+      281,
+      675
+    ],
+    "kind": "found",
+    "label": "MRP: Rs. 110.00",
+    "rule_id": "R10",
+    "rule_name": "MRP and best-before present",
+    "verdict": "PASS",
+    "found": "Rs. 110.00",
+    "expected": "MRP: Rs. 110.00, Best Before: Best before 9 months from date of packing",
+    "reason": "Both MRP and Best Before declarations are present",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      128,
+      700,
+      526,
+      730
+    ],
+    "kind": "found",
+    "label": "Best before: 9 months from date of packing",
+    "rule_id": "R10",
+    "rule_name": "MRP and best-before present",
+    "verdict": "PASS",
+    "found": "9 months from date of packing",
+    "expected": "MRP: Rs. 110.00, Best Before: Best before 9 months from date of packing",
+    "reason": "Both MRP and Best Before declarations are present",
+    "fssai_clause": "VERIFY"
+  }
+]

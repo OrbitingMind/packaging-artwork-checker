@@ -1,0 +1,132 @@
+[
+  {
+    "text": "Garam Masala Powder",
+    "bbox": [
+      127,
+      302,
+      438,
+      334
+    ],
+    "confidence": 0.956101345266978
+  },
+  {
+    "text": "Net Qty: 100 g",
+    "bbox": [
+      128,
+      376,
+      264,
+      404
+    ],
+    "confidence": 0.7470014153917786
+  },
+  {
+    "text": "Ingredients: Coriander, cumin, black pepper, cinnamon, cloves, cardamom_",
+    "bbox": [
+      126,
+      425,
+      810,
+      454
+    ],
+    "confidence": 0.8967739982756685
+  },
+  {
+    "text": "leaf, salt",
+    "bbox": [
+      850,
+      426,
+      936,
+      450
+    ],
+    "confidence": 0.4992742956858483
+  },
+  {
+    "text": "Allergen Information: Contains mustard:",
+    "bbox": [
+      127,
+      474,
+      500,
+      503
+    ],
+    "confidence": 0.9613482823558875
+  },
+  {
+    "text": "contain sesame_",
+    "bbox": [
+      548,
+      476,
+      696,
+      500
+    ],
+    "confidence": 0.9990246904203104
+  },
+  {
+    "text": "Manufactured by: Spice Route Foods Pvt Ltd, 45 Market Street, Mysuru 570001",
+    "bbox": [
+      130,
+      522,
+      848,
+      553
+    ],
+    "confidence": 0.6363623131037092
+  },
+  {
+    "text": "FSSAI Lic: No.",
+    "bbox": [
+      129,
+      575,
+      253,
+      595
+    ],
+    "confidence": 0.5134871124471503
+  },
+  {
+    "text": "11221999000456",
+    "bbox": [
+      260,
+      572,
+      420,
+      596
+    ],
+    "confidence": 0.8790321081110073
+  },
+  {
+    "text": "MRP: Rs. 75.00",
+    "bbox": [
+      130,
+      622,
+      270,
+      646
+    ],
+    "confidence": 0.9977696998752293
+  },
+  {
+    "text": "Best before 12 months from date of packing",
+    "bbox": [
+      128,
+      670,
+      538,
+      698
+    ],
+    "confidence": 0.6961931507486657
+  },
+  {
+    "text": "bay",
+    "bbox": [
+      811,
+      423,
+      856,
+      454
+    ],
+    "confidence": 0.999957741253165
+  },
+  {
+    "text": "May",
+    "bbox": [
+      501,
+      473,
+      551,
+      503
+    ],
+    "confidence": 0.999620368112607
+  }
+]

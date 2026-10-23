@@ -1,0 +1,172 @@
+[
+  {
+    "bbox": [
+      130,
+      384,
+      292,
+      414
+    ],
+    "kind": "found",
+    "label": "Net quantity: 200 g",
+    "rule_id": "R01",
+    "rule_name": "Net quantity present",
+    "verdict": "PASS",
+    "found": "200 g",
+    "expected": "200 g",
+    "reason": "Net quantity '200 g' is present",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      130,
+      384,
+      292,
+      414
+    ],
+    "kind": "found",
+    "label": "Net quantity: 200 g",
+    "rule_id": "R02",
+    "rule_name": "Net quantity matches spec",
+    "verdict": "PASS",
+    "found": "200 g",
+    "expected": "200 g",
+    "reason": "Net quantity numerical value '200' matches spec '200'",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      130,
+      384,
+      292,
+      414
+    ],
+    "kind": "found",
+    "label": "Net quantity unit: 200 g",
+    "rule_id": "R03",
+    "rule_name": "Correct unit",
+    "verdict": "PASS",
+    "found": "200 g",
+    "expected": "Approved unit (g, kg, mg, ml, l)",
+    "reason": "Net quantity unit 'g' conforms to legal metrology standards",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      129,
+      487,
+      802,
+      519
+    ],
+    "kind": "found",
+    "label": "Allergen statement",
+    "rule_id": "R05",
+    "rule_name": "Allergen section present",
+    "verdict": "PASS",
+    "found": "Contains wheat, oats. May contain milk.",
+    "expected": "Contains wheat, oats. May contain milk.",
+    "reason": "Allergen statement is present: 'Contains wheat, oats. May contain milk.'",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      129,
+      487,
+      802,
+      519
+    ],
+    "kind": "found",
+    "label": "Allergen declaration",
+    "rule_id": "R06",
+    "rule_name": "Allergens match spec",
+    "verdict": "PASS",
+    "found": "Contains wheat, oats. May contain milk.",
+    "expected": "wheat, oats, milk",
+    "reason": "All spec allergens (wheat, oats, milk) declared on packaging",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      128,
+      435,
+      918,
+      467
+    ],
+    "kind": "found",
+    "label": "Ingredients list",
+    "rule_id": "R07",
+    "rule_name": "Ingredients match spec",
+    "verdict": "FAIL",
+    "found": "Wheat flour, sugar, palm oil, invert syrup, salt, raising agents",
+    "expected": "Wheat flour, oats, sugar, palm oil, invert syrup, salt, raising agents",
+    "reason": "Missing ingredient(s): oats",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      128,
+      539,
+      906,
+      602
+    ],
+    "kind": "found",
+    "label": "Manufacturer details",
+    "rule_id": "R08",
+    "rule_name": "Manufacturer name and address present",
+    "verdict": "PASS",
+    "found": "Golden Crust Foods Pvt Ltd, 12 MG Road, Bengaluru 560001",
+    "expected": "Golden Crust Foods Pvt Ltd, 12 MG Road, Bengaluru 560001",
+    "reason": "Manufacturer name and address present (similarity: 1.00)",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      309,
+      625,
+      495,
+      651
+    ],
+    "kind": "found",
+    "label": "FSSAI license: 10020042001234",
+    "rule_id": "R09",
+    "rule_name": "FSSAI number is 14 digits",
+    "verdict": "PASS",
+    "found": "10020042001234",
+    "expected": "10020042001234",
+    "reason": "FSSAI license number contains exactly 14 digits: '10020042001234'",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      130,
+      678,
+      304,
+      704
+    ],
+    "kind": "found",
+    "label": "MRP: Rs. 40.00",
+    "rule_id": "R10",
+    "rule_name": "MRP and best-before present",
+    "verdict": "PASS",
+    "found": "Rs. 40.00",
+    "expected": "MRP: Rs. 40.00, Best Before: Best before 6 months from date of packing",
+    "reason": "Both MRP and Best Before declarations are present",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      130,
+      730,
+      594,
+      762
+    ],
+    "kind": "found",
+    "label": "Best before: 6 months from date of packing",
+    "rule_id": "R10",
+    "rule_name": "MRP and best-before present",
+    "verdict": "PASS",
+    "found": "6 months from date of packing",
+    "expected": "MRP: Rs. 40.00, Best Before: Best before 6 months from date of packing",
+    "reason": "Both MRP and Best Before declarations are present",
+    "fssai_clause": "VERIFY"
+  }
+]

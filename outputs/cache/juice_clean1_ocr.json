@@ -1,0 +1,152 @@
+[
+  {
+    "text": "Orange Fruit Drink",
+    "bbox": [
+      124,
+      300,
+      456,
+      353
+    ],
+    "confidence": 0.9787640107849963
+  },
+  {
+    "text": "Net Qty:",
+    "bbox": [
+      130,
+      384,
+      226,
+      412
+    ],
+    "confidence": 0.9998487176898314
+  },
+  {
+    "text": "Ingredients: Water , orange",
+    "bbox": [
+      128,
+      434,
+      430,
+      466
+    ],
+    "confidence": 0.6556341852858891
+  },
+  {
+    "text": "concentrate (10%) , sugar, acidity regulator",
+    "bbox": [
+      486,
+      434,
+      942,
+      467
+    ],
+    "confidence": 0.6671299024296453
+  },
+  {
+    "text": "(330) , preservative (223)",
+    "bbox": [
+      127,
+      467,
+      397,
+      503
+    ],
+    "confidence": 0.5996615798930003
+  },
+  {
+    "text": "Allergen Information: Contains sulphite.",
+    "bbox": [
+      128,
+      517,
+      570,
+      556
+    ],
+    "confidence": 0.8521020971566245
+  },
+  {
+    "text": "Manufactured by: Sunvale Beverages Pvt Ltd,",
+    "bbox": [
+      130,
+      573,
+      632,
+      606
+    ],
+    "confidence": 0.909197721232037
+  },
+  {
+    "text": "8 Industrial Area, Hubballi",
+    "bbox": [
+      638,
+      574,
+      914,
+      602
+    ],
+    "confidence": 0.8972907546507246
+  },
+  {
+    "text": "580030",
+    "bbox": [
+      128,
+      608,
+      214,
+      636
+    ],
+    "confidence": 0.8959012417036192
+  },
+  {
+    "text": "FSSAI Lic. No.-",
+    "bbox": [
+      128,
+      660,
+      300,
+      686
+    ],
+    "confidence": 0.550931761176761
+  },
+  {
+    "text": "10024011000789",
+    "bbox": [
+      312,
+      660,
+      498,
+      688
+    ],
+    "confidence": 0.9965480470597092
+  },
+  {
+    "text": "MRP: Rs_",
+    "bbox": [
+      130,
+      712,
+      232,
+      738
+    ],
+    "confidence": 0.7899540636360387
+  },
+  {
+    "text": "110.00",
+    "bbox": [
+      240,
+      712,
+      318,
+      738
+    ],
+    "confidence": 0.9999427185856221
+  },
+  {
+    "text": "Best before 9 months from date of packing",
+    "bbox": [
+      130,
+      764,
+      594,
+      796
+    ],
+    "confidence": 0.9764947271167735
+  },
+  {
+    "text": "juice",
+    "bbox": [
+      426,
+      433,
+      486,
+      465
+    ],
+    "confidence": 0.9858301526023411
+  }
+]

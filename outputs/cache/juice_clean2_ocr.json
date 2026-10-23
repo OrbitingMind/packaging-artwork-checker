@@ -1,0 +1,102 @@
+[
+  {
+    "text": "Orange Fruit Drink",
+    "bbox": [
+      126,
+      301,
+      381,
+      341
+    ],
+    "confidence": 0.9997110772566892
+  },
+  {
+    "text": "Net Qty: 1 L",
+    "bbox": [
+      128,
+      378,
+      242,
+      404
+    ],
+    "confidence": 0.8785150851967878
+  },
+  {
+    "text": "Ingredients: Water , orange juice concentrate (10%), sugar, acidity regulator (330),",
+    "bbox": [
+      126,
+      424,
+      874,
+      456
+    ],
+    "confidence": 0.5340204058607836
+  },
+  {
+    "text": "preservative (223)",
+    "bbox": [
+      127,
+      456,
+      298,
+      484
+    ],
+    "confidence": 0.9771281110972536
+  },
+  {
+    "text": "Allergen Information: Contains sulphite_",
+    "bbox": [
+      129,
+      504,
+      494,
+      533
+    ],
+    "confidence": 0.9974692860157317
+  },
+  {
+    "text": "Manufactured by: Sunvale Beverages Pvt Ltd, 8 Industrial Area, Hubballi 580030",
+    "bbox": [
+      130,
+      554,
+      858,
+      582
+    ],
+    "confidence": 0.9003279654182749
+  },
+  {
+    "text": "FSSAI Lic: No.=",
+    "bbox": [
+      128,
+      604,
+      254,
+      628
+    ],
+    "confidence": 0.5799955826384083
+  },
+  {
+    "text": "10024011000789",
+    "bbox": [
+      260,
+      604,
+      418,
+      628
+    ],
+    "confidence": 0.9999768375298441
+  },
+  {
+    "text": "MRP: Rs. 110.00",
+    "bbox": [
+      131,
+      655,
+      281,
+      675
+    ],
+    "confidence": 0.9889167530943841
+  },
+  {
+    "text": "Best before 9 months from date of packing",
+    "bbox": [
+      128,
+      700,
+      526,
+      730
+    ],
+    "confidence": 0.7280376352649549
+  }
+]

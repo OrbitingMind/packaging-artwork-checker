@@ -1,0 +1,138 @@
+[
+  {
+    "bbox": [
+      109,
+      286,
+      962,
+      724
+    ],
+    "kind": "missing",
+    "label": "Net quantity statement not found",
+    "rule_id": "R01",
+    "rule_name": "Net quantity present",
+    "verdict": "FAIL",
+    "found": "",
+    "expected": "52 g",
+    "reason": "Net quantity is missing",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      127,
+      418,
+      830,
+      501
+    ],
+    "kind": "found",
+    "label": "Allergen statement",
+    "rule_id": "R05",
+    "rule_name": "Allergen section present",
+    "verdict": "PASS",
+    "found": "Contains milk. May contain wheat and soy.",
+    "expected": "Contains milk. May contain wheat and soy.",
+    "reason": "Allergen statement is present: 'Contains milk. May contain wheat and soy.'",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      127,
+      418,
+      830,
+      501
+    ],
+    "kind": "found",
+    "label": "Allergen declaration",
+    "rule_id": "R06",
+    "rule_name": "Allergens match spec",
+    "verdict": "PASS",
+    "found": "Contains milk. May contain wheat and soy.",
+    "expected": "milk, wheat, soy",
+    "reason": "All spec allergens (milk, wheat, soy) declared on packaging",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      124,
+      379,
+      947,
+      444
+    ],
+    "kind": "found",
+    "label": "Ingredients list",
+    "rule_id": "R07",
+    "rule_name": "Ingredients match spec",
+    "verdict": "PASS",
+    "found": "Potato, edible vegetable oil (palm), spices and condiments, salt, milk solids",
+    "expected": "Potato, edible vegetable oil (palm), spices and condiments, salt, milk solids",
+    "reason": "Ingredients match specification in declared order",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      130,
+      521,
+      930,
+      554
+    ],
+    "kind": "found",
+    "label": "Manufacturer details",
+    "rule_id": "R08",
+    "rule_name": "Manufacturer name and address present",
+    "verdict": "PASS",
+    "found": "Crispo Snacks Pvt Ltd, 3 Ring Road, Mangaluru 575001",
+    "expected": "Crispo Snacks Pvt Ltd, 3 Ring Road, Mangaluru 575001",
+    "reason": "Manufacturer name and address present (similarity: 1.00)",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      128,
+      574,
+      496,
+      602
+    ],
+    "kind": "found",
+    "label": "FSSAI license: 12122008000321",
+    "rule_id": "R09",
+    "rule_name": "FSSAI number is 14 digits",
+    "verdict": "PASS",
+    "found": "12122008000321",
+    "expected": "12122008000321",
+    "reason": "FSSAI license number contains exactly 14 digits: '12122008000321'",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      130,
+      626,
+      304,
+      652
+    ],
+    "kind": "found",
+    "label": "MRP: Rs. 20.00",
+    "rule_id": "R10",
+    "rule_name": "MRP and best-before present",
+    "verdict": "PASS",
+    "found": "Rs. 20.00",
+    "expected": "MRP: Rs. 20.00, Best Before: Best before 4 months from date of packing",
+    "reason": "Both MRP and Best Before declarations are present",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      286,
+      678,
+      594,
+      709
+    ],
+    "kind": "found",
+    "label": "Best before: 4 months from date of packing",
+    "rule_id": "R10",
+    "rule_name": "MRP and best-before present",
+    "verdict": "PASS",
+    "found": "4 months from date of packing",
+    "expected": "MRP: Rs. 20.00, Best Before: Best before 4 months from date of packing",
+    "reason": "Both MRP and Best Before declarations are present",
+    "fssai_clause": "VERIFY"
+  }
+]

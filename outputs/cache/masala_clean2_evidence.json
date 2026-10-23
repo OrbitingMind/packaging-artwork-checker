@@ -1,0 +1,172 @@
+[
+  {
+    "bbox": [
+      128,
+      376,
+      264,
+      404
+    ],
+    "kind": "found",
+    "label": "Net quantity: 100 g",
+    "rule_id": "R01",
+    "rule_name": "Net quantity present",
+    "verdict": "PASS",
+    "found": "100 g",
+    "expected": "100 g",
+    "reason": "Net quantity '100 g' is present",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      128,
+      376,
+      264,
+      404
+    ],
+    "kind": "found",
+    "label": "Net quantity: 100 g",
+    "rule_id": "R02",
+    "rule_name": "Net quantity matches spec",
+    "verdict": "PASS",
+    "found": "100 g",
+    "expected": "100 g",
+    "reason": "Net quantity numerical value '100' matches spec '100'",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      128,
+      376,
+      264,
+      404
+    ],
+    "kind": "found",
+    "label": "Net quantity unit: 100 g",
+    "rule_id": "R03",
+    "rule_name": "Correct unit",
+    "verdict": "PASS",
+    "found": "100 g",
+    "expected": "Approved unit (g, kg, mg, ml, l)",
+    "reason": "Net quantity unit 'g' conforms to legal metrology standards",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      127,
+      474,
+      696,
+      503
+    ],
+    "kind": "found",
+    "label": "Allergen statement",
+    "rule_id": "R05",
+    "rule_name": "Allergen section present",
+    "verdict": "PASS",
+    "found": "Contains mustard. May contain sesame.",
+    "expected": "Contains mustard. May contain sesame.",
+    "reason": "Allergen statement is present: 'Contains mustard. May contain sesame.'",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      127,
+      474,
+      696,
+      503
+    ],
+    "kind": "found",
+    "label": "Allergen declaration",
+    "rule_id": "R06",
+    "rule_name": "Allergens match spec",
+    "verdict": "PASS",
+    "found": "Contains mustard. May contain sesame.",
+    "expected": "mustard, sesame",
+    "reason": "All spec allergens (mustard, sesame) declared on packaging",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      126,
+      425,
+      936,
+      454
+    ],
+    "kind": "found",
+    "label": "Ingredients list",
+    "rule_id": "R07",
+    "rule_name": "Ingredients match spec",
+    "verdict": "PASS",
+    "found": "Coriander, cumin, black pepper, cinnamon, cloves, cardamom, bay leaf, salt",
+    "expected": "Coriander, cumin, black pepper, cinnamon, cloves, cardamom, bay leaf, salt",
+    "reason": "Ingredients match specification in declared order",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      130,
+      522,
+      848,
+      553
+    ],
+    "kind": "found",
+    "label": "Manufacturer details",
+    "rule_id": "R08",
+    "rule_name": "Manufacturer name and address present",
+    "verdict": "PASS",
+    "found": "Spice Route Foods Pvt Ltd, 45 Market Street, Mysuru 570001",
+    "expected": "Spice Route Foods Pvt Ltd, 45 Market Street, Mysuru 570001",
+    "reason": "Manufacturer name and address present (similarity: 1.00)",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      260,
+      572,
+      420,
+      596
+    ],
+    "kind": "found",
+    "label": "FSSAI license: 11221999000456",
+    "rule_id": "R09",
+    "rule_name": "FSSAI number is 14 digits",
+    "verdict": "PASS",
+    "found": "11221999000456",
+    "expected": "11221999000456",
+    "reason": "FSSAI license number contains exactly 14 digits: '11221999000456'",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      130,
+      622,
+      270,
+      646
+    ],
+    "kind": "found",
+    "label": "MRP: Rs. 75.00",
+    "rule_id": "R10",
+    "rule_name": "MRP and best-before present",
+    "verdict": "PASS",
+    "found": "Rs. 75.00",
+    "expected": "MRP: Rs. 75.00, Best Before: Best before 12 months from date of packing",
+    "reason": "Both MRP and Best Before declarations are present",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      128,
+      670,
+      538,
+      698
+    ],
+    "kind": "found",
+    "label": "Best before: 12 months from date of packing",
+    "rule_id": "R10",
+    "rule_name": "MRP and best-before present",
+    "verdict": "PASS",
+    "found": "12 months from date of packing",
+    "expected": "MRP: Rs. 75.00, Best Before: Best before 12 months from date of packing",
+    "reason": "Both MRP and Best Before declarations are present",
+    "fssai_clause": "VERIFY"
+  }
+]

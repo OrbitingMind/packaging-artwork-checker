@@ -1,0 +1,138 @@
+[
+  {
+    "bbox": [
+      248,
+      386,
+      278,
+      414
+    ],
+    "kind": "found",
+    "label": "Net quantity: 1 kg",
+    "rule_id": "R01",
+    "rule_name": "Net quantity present",
+    "verdict": "PASS",
+    "found": "1 kg",
+    "expected": "1 kg",
+    "reason": "Net quantity '1 kg' is present",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      248,
+      386,
+      278,
+      414
+    ],
+    "kind": "found",
+    "label": "Net quantity: 1 kg",
+    "rule_id": "R02",
+    "rule_name": "Net quantity matches spec",
+    "verdict": "PASS",
+    "found": "1 kg",
+    "expected": "1 kg",
+    "reason": "Net quantity numerical value '1' matches spec '1'",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      248,
+      386,
+      278,
+      414
+    ],
+    "kind": "found",
+    "label": "Net quantity unit: 1 kg",
+    "rule_id": "R03",
+    "rule_name": "Correct unit",
+    "verdict": "PASS",
+    "found": "1 kg",
+    "expected": "Approved unit (g, kg, mg, ml, l)",
+    "reason": "Net quantity unit 'kg' conforms to legal metrology standards",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      126,
+      432,
+      853,
+      471
+    ],
+    "kind": "found",
+    "label": "Ingredients list",
+    "rule_id": "R07",
+    "rule_name": "Ingredients match spec",
+    "verdict": "PASS",
+    "found": "Edible common salt, potassium iodate (iodine 15 ppm)",
+    "expected": "Edible common salt, potassium iodate (iodine 15 ppm)",
+    "reason": "Ingredients match specification in declared order",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      129,
+      485,
+      941,
+      521
+    ],
+    "kind": "found",
+    "label": "Manufacturer details",
+    "rule_id": "R08",
+    "rule_name": "Manufacturer name and address present",
+    "verdict": "PASS",
+    "found": "Seashore Salts Pvt Ltd, 21 Harbour Road, Udupi 576101",
+    "expected": "Seashore Salts Pvt Ltd, 21 Harbour Road, Udupi 576101",
+    "reason": "Manufacturer name and address present (similarity: 1.00)",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      310,
+      540,
+      498,
+      568
+    ],
+    "kind": "found",
+    "label": "FSSAI license: 10019043000654",
+    "rule_id": "R09",
+    "rule_name": "FSSAI number is 14 digits",
+    "verdict": "PASS",
+    "found": "10019043000654",
+    "expected": "10019043000654",
+    "reason": "FSSAI license number contains exactly 14 digits: '10019043000654'",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      130,
+      592,
+      304,
+      618
+    ],
+    "kind": "found",
+    "label": "MRP: Rs. 28.00",
+    "rule_id": "R10",
+    "rule_name": "MRP and best-before present",
+    "verdict": "PASS",
+    "found": "Rs. 28.00",
+    "expected": "MRP: Rs. 28.00, Best Before: Best before 24 months from date of packing",
+    "reason": "Both MRP and Best Before declarations are present",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      130,
+      644,
+      606,
+      674
+    ],
+    "kind": "found",
+    "label": "Best before: 24 months from date of packing",
+    "rule_id": "R10",
+    "rule_name": "MRP and best-before present",
+    "verdict": "PASS",
+    "found": "24 months from date of packing",
+    "expected": "MRP: Rs. 28.00, Best Before: Best before 24 months from date of packing",
+    "reason": "Both MRP and Best Before declarations are present",
+    "fssai_clause": "VERIFY"
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "text": "Crunchy Oat Biscuits",
+    "bbox": [
+      126,
+      302,
+      502,
+      352
+    ],
+    "confidence": 0.9057890834338796
+  },
+  {
+    "text": "Net",
+    "bbox": [
+      130,
+      384,
+      174,
+      410
+    ],
+    "confidence": 0.9999980728858172
+  },
+  {
+    "text": "200 g",
+    "bbox": [
+      228,
+      384,
+      292,
+      414
+    ],
+    "confidence": 0.8919368905362093
+  },
+  {
+    "text": "Ingredients: Wheat flour, oats, sugar, palm oil, invert syrup, salt, raising",
+    "bbox": [
+      128,
+      434,
+      899,
+      467
+    ],
+    "confidence": 0.7328917906619792
+  },
+  {
+    "text": "agents",
+    "bbox": [
+      125,
+      467,
+      206,
+      503
+    ],
+    "confidence": 0.9999971286467422
+  },
+  {
+    "text": "Allergen Information: Contains wheat; oats. May contain milk",
+    "bbox": [
+      129,
+      520,
+      800,
+      553
+    ],
+    "confidence": 0.8658056099328366
+  },
+  {
+    "text": "Manufactured by: Golden Crust Foods Pvt Ltd, 12 MG Road, Bengaluru",
+    "bbox": [
+      130,
+      573,
+      906,
+      606
+    ],
+    "confidence": 0.7301659083471151
+  },
+  {
+    "text": "560001",
+    "bbox": [
+      128,
+      608,
+      212,
+      636
+    ],
+    "confidence": 0.9999993186621065
+  },
+  {
+    "text": "FSSAI Lic. No.-",
+    "bbox": [
+      128,
+      660,
+      300,
+      686
+    ],
+    "confidence": 0.4707834318566582
+  },
+  {
+    "text": "10020042001234",
+    "bbox": [
+      311,
+      659,
+      497,
+      687
+    ],
+    "confidence": 0.709105346023988
+  },
+  {
+    "text": "MRP: Rs_",
+    "bbox": [
+      130,
+      712,
+      232,
+      738
+    ],
+    "confidence": 0.704833302825651
+  },
+  {
+    "text": "40.00",
+    "bbox": [
+      240,
+      712,
+      304,
+      738
+    ],
+    "confidence": 0.9999117172067249
+  },
+  {
+    "text": "Best before 6 months from date of packing",
+    "bbox": [
+      130,
+      764,
+      594,
+      796
+    ],
+    "confidence": 0.975463240592662
+  },
+  {
+    "text": "Qty:",
+    "bbox": [
+      171,
+      381,
+      228,
+      416
+    ],
+    "confidence": 0.9990264773368835
+  }
+]

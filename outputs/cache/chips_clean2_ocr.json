@@ -1,0 +1,92 @@
+[
+  {
+    "text": "Masala Potato Chips",
+    "bbox": [
+      129,
+      298,
+      410,
+      341
+    ],
+    "confidence": 0.8855834625750183
+  },
+  {
+    "text": "Net Qty: 52 g",
+    "bbox": [
+      128,
+      378,
+      254,
+      404
+    ],
+    "confidence": 0.8325614135588478
+  },
+  {
+    "text": "Ingredients: Potato, edible vegetable oil (palm) , spices and condiments, salt, milk solids",
+    "bbox": [
+      126,
+      424,
+      924,
+      456
+    ],
+    "confidence": 0.6201442366060784
+  },
+  {
+    "text": "Allergen Information: Contains milk. May contain wheat and soy_",
+    "bbox": [
+      127,
+      474,
+      722,
+      503
+    ],
+    "confidence": 0.6278014032733092
+  },
+  {
+    "text": "Manufactured by: Crispo Snacks Pvt Ltd, 3 Ring Road, Mangaluru 575001",
+    "bbox": [
+      130,
+      523,
+      792,
+      551
+    ],
+    "confidence": 0.7522955030335253
+  },
+  {
+    "text": "FSSAI Lic. No.=",
+    "bbox": [
+      128,
+      572,
+      254,
+      596
+    ],
+    "confidence": 0.5973435871127691
+  },
+  {
+    "text": "12122008000321",
+    "bbox": [
+      260,
+      572,
+      418,
+      596
+    ],
+    "confidence": 0.9965248562707867
+  },
+  {
+    "text": "MRP: Rs. 20.00",
+    "bbox": [
+      130,
+      622,
+      270,
+      646
+    ],
+    "confidence": 0.9958531107727578
+  },
+  {
+    "text": "Best before 4 months from date of packing",
+    "bbox": [
+      128,
+      670,
+      526,
+      698
+    ],
+    "confidence": 0.7375694667353684
+  }
+]

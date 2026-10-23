@@ -7,10 +7,12 @@ AI-Powered Packaging Artwork Compliance Checker for FSSAI Regulations
 import json
 import os
 import tempfile
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Tuple
 from PIL import Image
 import streamlit as st
 
+from annotated_view import render_annotated_image
+from locate import locate_evidence
 from pipeline import check_image
 from rules_loader import load_rules
 
@@ -103,6 +105,51 @@ st.markdown(
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 IMAGES_DIR = os.path.join(BASE_DIR, "dataset", "images")
 SPECS_DIR = os.path.join(BASE_DIR, "dataset", "specs")
+CACHE_DIR = os.path.join(BASE_DIR, "outputs", "cache")
+
+
+def get_cached_ocr_lines(img_path: str) -> List[Dict[str, Any]]:
+    """Loads OCR lines from cache or extracts via EasyOCR once."""
+    base_name = os.path.splitext(os.path.basename(img_path))[0]
+    cache_path = os.path.join(CACHE_DIR, f"{base_name}_ocr.json")
+    if os.path.exists(cache_path):
+        with open(cache_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+
+    from extract_ocr import extract_text
+    lines = extract_text(img_path)
+    try:
+        os.makedirs(CACHE_DIR, exist_ok=True)
+        with open(cache_path, "w", encoding="utf-8") as f:
+            json.dump(lines, f, indent=2)
+    except Exception:
+        pass
+    return lines
+
+
+def get_cached_evidence_boxes(
+    img_path: str,
+    findings: List[Dict[str, Any]],
+    img_size: Tuple[int, int],
+) -> List[Dict[str, Any]]:
+    """Loads evidence boxes from cache or computes via locate_evidence."""
+    base_name = os.path.splitext(os.path.basename(img_path))[0]
+    cache_path = os.path.join(CACHE_DIR, f"{base_name}_evidence.json")
+    if os.path.exists(cache_path):
+        with open(cache_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+
+    ocr_lines = get_cached_ocr_lines(img_path)
+    boxes = []
+    for f in findings:
+        boxes.extend(locate_evidence(ocr_lines, f, img_size))
+    try:
+        os.makedirs(CACHE_DIR, exist_ok=True)
+        with open(cache_path, "w", encoding="utf-8") as f:
+            json.dump(boxes, f, indent=2)
+    except Exception:
+        pass
+    return boxes
 
 
 @st.cache_data
@@ -123,6 +170,11 @@ SAMPLE_OPTIONS = {
         "file": "biscuit_clean1.png",
         "spec": "biscuit.json",
         "desc": "Compliant packaging meeting all FSSAI labelling standards.",
+    },
+    "Biscuit Error R02 (Wrong Net Quantity)": {
+        "file": "biscuit_errR02.png",
+        "spec": "biscuit.json",
+        "desc": "Violates R02: Declared net quantity (20 g) does not match specification (200 g).",
     },
     "Biscuit Error R05 (Missing Allergen Box)": {
         "file": "biscuit_errR05.png",
@@ -192,11 +244,15 @@ with st.sidebar:
             type=["png", "jpg", "jpeg", "webp"],
         )
         if uploaded_file is not None:
-            # Save uploaded image to temp directory
-            tfile = tempfile.NamedTemporaryFile(delete=False, suffix=os.path.splitext(uploaded_file.name)[1])
-            tfile.write(uploaded_file.read())
-            tfile.close()
-            image_path = tfile.name
+            # Cache uploaded image in session state to avoid re-writing temp file on every interaction
+            file_key = f"uploaded_{uploaded_file.name}_{uploaded_file.size}"
+            if file_key not in st.session_state or not os.path.exists(st.session_state[file_key]):
+                suffix = os.path.splitext(uploaded_file.name)[1]
+                tfile = tempfile.NamedTemporaryFile(delete=False, suffix=suffix)
+                tfile.write(uploaded_file.getvalue())
+                tfile.close()
+                st.session_state[file_key] = tfile.name
+            image_path = st.session_state[file_key]
 
         # Spec selector for uploaded images
         available_specs = [f for f in os.listdir(SPECS_DIR) if f.endswith(".json")] if os.path.exists(SPECS_DIR) else []
@@ -219,13 +275,32 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+# Run audit or retrieve cached results
+should_audit = bool(run_btn or ("last_run" in st.session_state and st.session_state["last_run"] == image_path))
+findings: List[Dict[str, Any]] = []
+evidence_boxes: List[Dict[str, Any]] = []
+
+if should_audit and image_path and os.path.exists(image_path) and spec_path and os.path.exists(spec_path):
+    st.session_state["last_run"] = image_path
+    try:
+        findings = check_image(image_path, spec_path)
+        with Image.open(image_path) as img_obj:
+            evidence_boxes = get_cached_evidence_boxes(image_path, findings, img_obj.size)
+    except Exception as e:
+        st.error(f"Error executing compliance audit: {e}")
+        findings = []
+
 col_left, col_right = st.columns([1, 1], gap="large")
 
 with col_left:
     st.subheader("🖼️ Packaging Artwork")
     if image_path and os.path.exists(image_path):
-        img = Image.open(image_path)
-        st.image(img, use_container_width=True, caption=os.path.basename(image_path))
+        if should_audit and findings:
+            show_passing = st.toggle("Show passing rules on image", value=False)
+            render_annotated_image(image_path, evidence_boxes, show_passing=show_passing)
+        else:
+            img = Image.open(image_path)
+            st.image(img, use_container_width=True, caption=os.path.basename(image_path))
     else:
         st.warning("Please select or upload a packaging artwork image.")
 
@@ -248,88 +323,78 @@ with col_right:
 st.divider()
 
 # Audit Results Section
-if run_btn or ("last_run" in st.session_state and st.session_state["last_run"] == image_path):
-    st.session_state["last_run"] = image_path
+if should_audit:
+    if findings:
+        # Calculate summary stats
+        pass_count = sum(1 for f in findings if f.get("verdict") == "PASS")
+        fail_count = sum(1 for f in findings if f.get("verdict") == "FAIL")
+        review_count = sum(1 for f in findings if f.get("verdict") == "NEEDS_REVIEW")
+        na_count = sum(1 for f in findings if f.get("verdict") == "N/A")
 
-    if image_path and os.path.exists(image_path) and spec_path and os.path.exists(spec_path):
-        with st.spinner("Auditing artwork with Claude Vision & deterministic rule checks..."):
-            try:
-                findings = check_image(image_path, spec_path)
-            except Exception as e:
-                st.error(f"Error executing compliance audit: {e}")
-                findings = []
+        # High-level Banner
+        if fail_count > 0:
+            st.error(f"❌ **NON-COMPLIANT ARTWORK**: {fail_count} regulatory violation(s) detected. Artwork cannot be approved for printing.")
+        elif review_count > 0:
+            st.warning(f"⚠️ **HUMAN REVIEW REQUIRED**: {review_count} rule(s) require manual inspection due to low confidence or order ambiguity.")
+        else:
+            st.success("✅ **PACKAGING APPROVED**: All applicable FSSAI regulatory requirements are satisfied with 100% compliance!")
 
-        if findings:
-            # Calculate summary stats
-            pass_count = sum(1 for f in findings if f.get("verdict") == "PASS")
-            fail_count = sum(1 for f in findings if f.get("verdict") == "FAIL")
-            review_count = sum(1 for f in findings if f.get("verdict") == "NEEDS_REVIEW")
-            na_count = sum(1 for f in findings if f.get("verdict") == "N/A")
+        # Metric Scorecards
+        m1, m2, m3, m4, m5 = st.columns(5)
+        with m1:
+            st.markdown(f'<div class="kpi-card"><div class="kpi-value">{len(findings)}</div><div class="kpi-label">Rules Checked</div></div>', unsafe_allow_html=True)
+        with m2:
+            st.markdown(f'<div class="kpi-card"><div class="kpi-value" style="color:#16a34a;">{pass_count}</div><div class="kpi-label">Passed</div></div>', unsafe_allow_html=True)
+        with m3:
+            st.markdown(f'<div class="kpi-card"><div class="kpi-value" style="color:#dc2626;">{fail_count}</div><div class="kpi-label">Violations (FAIL)</div></div>', unsafe_allow_html=True)
+        with m4:
+            st.markdown(f'<div class="kpi-card"><div class="kpi-value" style="color:#d97706;">{review_count}</div><div class="kpi-label">Needs Review</div></div>', unsafe_allow_html=True)
+        with m5:
+            st.markdown(f'<div class="kpi-card"><div class="kpi-value" style="color:#64748b;">{na_count}</div><div class="kpi-label">Not Applicable</div></div>', unsafe_allow_html=True)
 
-            # High-level Banner
-            if fail_count > 0:
-                st.error(f"❌ **NON-COMPLIANT ARTWORK**: {fail_count} regulatory violation(s) detected. Artwork cannot be approved for printing.")
-            elif review_count > 0:
-                st.warning(f"⚠️ **HUMAN REVIEW REQUIRED**: {review_count} rule(s) require manual inspection due to low confidence or order ambiguity.")
+        st.markdown("### 📑 Detailed Rule-by-Rule Findings")
+
+        filter_mode = st.radio(
+            "Filter findings by:",
+            ["All Rules", "Violations Only (FAIL)", "Review Needed (NEEDS_REVIEW)"],
+            horizontal=True,
+        )
+
+        for item in findings:
+            r_id = item["rule_id"]
+            r_name = rules_map.get(r_id, r_id)
+            verdict = item["verdict"]
+
+            if filter_mode == "Violations Only (FAIL)" and verdict != "FAIL":
+                continue
+            if filter_mode == "Review Needed (NEEDS_REVIEW)" and verdict != "NEEDS_REVIEW":
+                continue
+
+            if verdict == "PASS":
+                badge_html = '<span class="pass-badge">PASS</span>'
+                icon = "✅"
+            elif verdict == "FAIL":
+                badge_html = '<span class="fail-badge">FAIL</span>'
+                icon = "❌"
+            elif verdict == "NEEDS_REVIEW":
+                badge_html = '<span class="review-badge">NEEDS REVIEW</span>'
+                icon = "⚠️"
             else:
-                st.success("✅ **PACKAGING APPROVED**: All applicable FSSAI regulatory requirements are satisfied with 100% compliance!")
+                badge_html = '<span class="na-badge">N/A</span>'
+                icon = "⚪"
 
-            # Metric Scorecards
-            m1, m2, m3, m4, m5 = st.columns(5)
-            with m1:
-                st.markdown(f'<div class="kpi-card"><div class="kpi-value">{len(findings)}</div><div class="kpi-label">Rules Checked</div></div>', unsafe_allow_html=True)
-            with m2:
-                st.markdown(f'<div class="kpi-card"><div class="kpi-value" style="color:#16a34a;">{pass_count}</div><div class="kpi-label">Passed</div></div>', unsafe_allow_html=True)
-            with m3:
-                st.markdown(f'<div class="kpi-card"><div class="kpi-value" style="color:#dc2626;">{fail_count}</div><div class="kpi-label">Violations (FAIL)</div></div>', unsafe_allow_html=True)
-            with m4:
-                st.markdown(f'<div class="kpi-card"><div class="kpi-value" style="color:#d97706;">{review_count}</div><div class="kpi-label">Needs Review</div></div>', unsafe_allow_html=True)
-            with m5:
-                st.markdown(f'<div class="kpi-card"><div class="kpi-value" style="color:#64748b;">{na_count}</div><div class="kpi-label">Not Applicable</div></div>', unsafe_allow_html=True)
+            with st.expander(f"{icon} **[{r_id}] {r_name}** — {verdict}", expanded=(verdict == "FAIL")):
+                c1, c2 = st.columns([1, 1])
+                with c1:
+                    st.markdown(f"**Found Text / Value:**")
+                    st.code(str(item.get("found", "(None)")), language="text")
+                with c2:
+                    st.markdown(f"**Expected (Spec / Regulation):**")
+                    st.code(str(item.get("expected", "(None)")), language="text")
 
-            st.markdown("### 📑 Detailed Rule-by-Rule Findings")
-
-            filter_mode = st.radio(
-                "Filter findings by:",
-                ["All Rules", "Violations Only (FAIL)", "Review Needed (NEEDS_REVIEW)"],
-                horizontal=True,
-            )
-
-            for item in findings:
-                r_id = item["rule_id"]
-                r_name = rules_map.get(r_id, r_id)
-                verdict = item["verdict"]
-
-                if filter_mode == "Violations Only (FAIL)" and verdict != "FAIL":
-                    continue
-                if filter_mode == "Review Needed (NEEDS_REVIEW)" and verdict != "NEEDS_REVIEW":
-                    continue
-
-                if verdict == "PASS":
-                    badge_html = '<span class="pass-badge">PASS</span>'
-                    icon = "✅"
-                elif verdict == "FAIL":
-                    badge_html = '<span class="fail-badge">FAIL</span>'
-                    icon = "❌"
-                elif verdict == "NEEDS_REVIEW":
-                    badge_html = '<span class="review-badge">NEEDS REVIEW</span>'
-                    icon = "⚠️"
-                else:
-                    badge_html = '<span class="na-badge">N/A</span>'
-                    icon = "⚪"
-
-                with st.expander(f"{icon} **[{r_id}] {r_name}** — {verdict}", expanded=(verdict == "FAIL")):
-                    c1, c2 = st.columns([1, 1])
-                    with c1:
-                        st.markdown(f"**Found Text / Value:**")
-                        st.code(str(item.get("found", "(None)")), language="text")
-                    with c2:
-                        st.markdown(f"**Expected (Spec / Regulation):**")
-                        st.code(str(item.get("expected", "(None)")), language="text")
-
-                    st.markdown(f"**Finding Reason:** {item.get('reason', 'N/A')}")
-    else:
-        st.info("Select an artwork on the left and click 'Run Compliance Audit' to start.")
+                st.markdown(f"**Finding Reason:** {item.get('reason', 'N/A')}")
+else:
+    st.info("Select an artwork on the left and click 'Run Compliance Audit' to start.")
 
 # Footer with quick reference
 with st.expander("📚 Reference: The 10 FSSAI Labelling Rules Evaluated"):

@@ -1,0 +1,92 @@
+[
+  {
+    "text": "Crunchy Oat Biscuits",
+    "bbox": [
+      129,
+      303,
+      407,
+      341
+    ],
+    "confidence": 0.9986064835040652
+  },
+  {
+    "text": "Net Qty: 200 g",
+    "bbox": [
+      130,
+      378,
+      264,
+      404
+    ],
+    "confidence": 0.7653775107083842
+  },
+  {
+    "text": "Ingredients: Wheat flour, oats, sugar, palm oil, invert syrup, salt, raising agents",
+    "bbox": [
+      128,
+      424,
+      847,
+      455
+    ],
+    "confidence": 0.5522976370942242
+  },
+  {
+    "text": "Allergen Information: Contains wheat, oats. May contain milk",
+    "bbox": [
+      127,
+      474,
+      696,
+      503
+    ],
+    "confidence": 0.5774247906657838
+  },
+  {
+    "text": "Manufactured by: Golden Crust Foods Pvt Ltd, 12 MG Road, Bengaluru 560001",
+    "bbox": [
+      130,
+      523,
+      844,
+      551
+    ],
+    "confidence": 0.8118176865011998
+  },
+  {
+    "text": "FSSAI Lic. No.=",
+    "bbox": [
+      128,
+      572,
+      254,
+      596
+    ],
+    "confidence": 0.5370118646095293
+  },
+  {
+    "text": "10020042001234",
+    "bbox": [
+      260,
+      572,
+      418,
+      596
+    ],
+    "confidence": 0.8773326774841149
+  },
+  {
+    "text": "MRP: Rs. 40.00",
+    "bbox": [
+      130,
+      622,
+      270,
+      646
+    ],
+    "confidence": 0.9977966412945539
+  },
+  {
+    "text": "Best before 6 months from date of packing",
+    "bbox": [
+      128,
+      670,
+      526,
+      698
+    ],
+    "confidence": 0.717592819635735
+  }
+]

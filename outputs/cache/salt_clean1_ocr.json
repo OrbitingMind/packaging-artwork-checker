@@ -1,0 +1,102 @@
+[
+  {
+    "text": "lodized Salt",
+    "bbox": [
+      125,
+      303,
+      337,
+      345
+    ],
+    "confidence": 0.9593116413034787
+  },
+  {
+    "text": "Net",
+    "bbox": [
+      130,
+      386,
+      172,
+      410
+    ],
+    "confidence": 0.9999964210740566
+  },
+  {
+    "text": "kg",
+    "bbox": [
+      248,
+      386,
+      278,
+      414
+    ],
+    "confidence": 0.998583906860595
+  },
+  {
+    "text": "Ingredients: Edible common salt, potassium iodate (iodine 15 ppm)",
+    "bbox": [
+      126,
+      432,
+      853,
+      471
+    ],
+    "confidence": 0.642724766726421
+  },
+  {
+    "text": "Manufactured by: Seashore Salts Pvt Ltd, 21 Harbour Road, Udupi 576101",
+    "bbox": [
+      129,
+      485,
+      941,
+      521
+    ],
+    "confidence": 0.793328366961171
+  },
+  {
+    "text": "FSSAI Lic. No.-",
+    "bbox": [
+      128,
+      540,
+      300,
+      566
+    ],
+    "confidence": 0.4286254113872889
+  },
+  {
+    "text": "10019043000654",
+    "bbox": [
+      310,
+      540,
+      498,
+      568
+    ],
+    "confidence": 0.9956286747212758
+  },
+  {
+    "text": "MRP: Rs. 28.00",
+    "bbox": [
+      130,
+      592,
+      304,
+      618
+    ],
+    "confidence": 0.8322911461043531
+  },
+  {
+    "text": "Best before 24 months from date of packing",
+    "bbox": [
+      130,
+      644,
+      606,
+      674
+    ],
+    "confidence": 0.9573367270889784
+  },
+  {
+    "text": "Qty:",
+    "bbox": [
+      170,
+      381,
+      229,
+      417
+    ],
+    "confidence": 0.9992370009422302
+  }
+]

@@ -1,0 +1,192 @@
+[
+  {
+    "text": "Masala Potato Chips",
+    "bbox": [
+      130,
+      302,
+      488,
+      352
+    ],
+    "confidence": 0.945868686827558
+  },
+  {
+    "text": "Net",
+    "bbox": [
+      128,
+      384,
+      174,
+      410
+    ],
+    "confidence": 0.999999449395897
+  },
+  {
+    "text": "52 g",
+    "bbox": [
+      228,
+      384,
+      280,
+      414
+    ],
+    "confidence": 0.6460489001130262
+  },
+  {
+    "text": "Ingredients: Potato,",
+    "bbox": [
+      126,
+      436,
+      350,
+      466
+    ],
+    "confidence": 0.6997825451803765
+  },
+  {
+    "text": "edible",
+    "bbox": [
+      356,
+      438,
+      424,
+      462
+    ],
+    "confidence": 0.9999996106640736
+  },
+  {
+    "text": "vegetable oil (palm) , spices and condiments, salt,",
+    "bbox": [
+      422,
+      433,
+      947,
+      469
+    ],
+    "confidence": 0.633143559794755
+  },
+  {
+    "text": "milk solids",
+    "bbox": [
+      128,
+      470,
+      244,
+      496
+    ],
+    "confidence": 0.9996326976672866
+  },
+  {
+    "text": "Allergen Information: Contains milk",
+    "bbox": [
+      127,
+      520,
+      528,
+      553
+    ],
+    "confidence": 0.9926124533621362
+  },
+  {
+    "text": "contain wheat and soy_",
+    "bbox": [
+      586,
+      524,
+      830,
+      552
+    ],
+    "confidence": 0.9747034934624339
+  },
+  {
+    "text": "Manufactured by: Crispo Snacks Pvt Ltd;",
+    "bbox": [
+      130,
+      573,
+      580,
+      606
+    ],
+    "confidence": 0.8403154463073874
+  },
+  {
+    "text": "3",
+    "bbox": [
+      587,
+      577,
+      601,
+      599
+    ],
+    "confidence": 0.9999997615814351
+  },
+  {
+    "text": "Ring Road, Mangaluru 575001",
+    "bbox": [
+      601,
+      571,
+      933,
+      608
+    ],
+    "confidence": 0.8140161923529595
+  },
+  {
+    "text": "FSSAI Lic",
+    "bbox": [
+      128,
+      626,
+      248,
+      654
+    ],
+    "confidence": 0.996169081701971
+  },
+  {
+    "text": "No:: 12122008000321",
+    "bbox": [
+      256,
+      626,
+      496,
+      654
+    ],
+    "confidence": 0.6074344983933478
+  },
+  {
+    "text": "MRP: Rs_",
+    "bbox": [
+      130,
+      678,
+      232,
+      704
+    ],
+    "confidence": 0.8858286212179665
+  },
+  {
+    "text": "20.00",
+    "bbox": [
+      240,
+      678,
+      304,
+      704
+    ],
+    "confidence": 0.9998450738678221
+  },
+  {
+    "text": "Best before 4 months from date of packing",
+    "bbox": [
+      130,
+      730,
+      594,
+      761
+    ],
+    "confidence": 0.99596586252502
+  },
+  {
+    "text": "Qty:",
+    "bbox": [
+      170,
+      381,
+      231,
+      419
+    ],
+    "confidence": 0.9920576214790344
+  },
+  {
+    "text": "May",
+    "bbox": [
+      532,
+      518,
+      591,
+      556
+    ],
+    "confidence": 0.708886981010437
+  }
+]

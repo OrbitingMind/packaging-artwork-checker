@@ -1,0 +1,172 @@
+[
+  {
+    "bbox": [
+      228,
+      384,
+      280,
+      414
+    ],
+    "kind": "found",
+    "label": "Net quantity: 52 g",
+    "rule_id": "R01",
+    "rule_name": "Net quantity present",
+    "verdict": "PASS",
+    "found": "52 g",
+    "expected": "52 g",
+    "reason": "Net quantity '52 g' is present",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      228,
+      384,
+      280,
+      414
+    ],
+    "kind": "found",
+    "label": "Net quantity: 52 g",
+    "rule_id": "R02",
+    "rule_name": "Net quantity matches spec",
+    "verdict": "PASS",
+    "found": "52 g",
+    "expected": "52 g",
+    "reason": "Net quantity numerical value '52' matches spec '52'",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      228,
+      384,
+      280,
+      414
+    ],
+    "kind": "found",
+    "label": "Net quantity unit: 52 g",
+    "rule_id": "R03",
+    "rule_name": "Correct unit",
+    "verdict": "PASS",
+    "found": "52 g",
+    "expected": "Approved unit (g, kg, mg, ml, l)",
+    "reason": "Net quantity unit 'g' conforms to legal metrology standards",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      127,
+      470,
+      830,
+      553
+    ],
+    "kind": "found",
+    "label": "Allergen statement",
+    "rule_id": "R05",
+    "rule_name": "Allergen section present",
+    "verdict": "PASS",
+    "found": "Contains milk. May contain wheat and soy.",
+    "expected": "Contains milk. May contain wheat and soy.",
+    "reason": "Allergen statement is present: 'Contains milk. May contain wheat and soy.'",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      127,
+      470,
+      830,
+      553
+    ],
+    "kind": "found",
+    "label": "Allergen declaration",
+    "rule_id": "R06",
+    "rule_name": "Allergens match spec",
+    "verdict": "PASS",
+    "found": "Contains milk. May contain wheat and soy.",
+    "expected": "milk, wheat, soy",
+    "reason": "All spec allergens (milk, wheat, soy) declared on packaging",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      126,
+      433,
+      947,
+      496
+    ],
+    "kind": "found",
+    "label": "Ingredients list",
+    "rule_id": "R07",
+    "rule_name": "Ingredients match spec",
+    "verdict": "PASS",
+    "found": "Potato, edible vegetable oil (palm), spices and condiments, salt, milk solids",
+    "expected": "Potato, edible vegetable oil (palm), spices and condiments, salt, milk solids",
+    "reason": "Ingredients match specification in declared order",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      130,
+      571,
+      933,
+      608
+    ],
+    "kind": "found",
+    "label": "Manufacturer details",
+    "rule_id": "R08",
+    "rule_name": "Manufacturer name and address present",
+    "verdict": "PASS",
+    "found": "Crispo Snacks Pvt Ltd, 3 Ring Road, Mangaluru 575001",
+    "expected": "Crispo Snacks Pvt Ltd, 3 Ring Road, Mangaluru 575001",
+    "reason": "Manufacturer name and address present (similarity: 1.00)",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      256,
+      626,
+      496,
+      654
+    ],
+    "kind": "found",
+    "label": "FSSAI license: 12122008000321",
+    "rule_id": "R09",
+    "rule_name": "FSSAI number is 14 digits",
+    "verdict": "PASS",
+    "found": "12122008000321",
+    "expected": "12122008000321",
+    "reason": "FSSAI license number contains exactly 14 digits: '12122008000321'",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      130,
+      678,
+      304,
+      704
+    ],
+    "kind": "found",
+    "label": "MRP: Rs. 20.00",
+    "rule_id": "R10",
+    "rule_name": "MRP and best-before present",
+    "verdict": "PASS",
+    "found": "Rs. 20.00",
+    "expected": "MRP: Rs. 20.00, Best Before: Best before 4 months from date of packing",
+    "reason": "Both MRP and Best Before declarations are present",
+    "fssai_clause": "VERIFY"
+  },
+  {
+    "bbox": [
+      130,
+      730,
+      594,
+      761
+    ],
+    "kind": "found",
+    "label": "Best before: 4 months from date of packing",
+    "rule_id": "R10",
+    "rule_name": "MRP and best-before present",
+    "verdict": "PASS",
+    "found": "4 months from date of packing",
+    "expected": "MRP: Rs. 20.00, Best Before: Best before 4 months from date of packing",
+    "reason": "Both MRP and Best Before declarations are present",
+    "fssai_clause": "VERIFY"
+  }
+]

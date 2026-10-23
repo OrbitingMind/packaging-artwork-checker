@@ -1,0 +1,132 @@
+[
+  {
+    "text": "Masala Potato Chips",
+    "bbox": [
+      129,
+      301,
+      489,
+      351
+    ],
+    "confidence": 0.45980734055068595
+  },
+  {
+    "text": "Ingredients: Potato, edible vegetable oil (palm) , spices and condiments, salt;",
+    "bbox": [
+      124,
+      379,
+      947,
+      417
+    ],
+    "confidence": 0.686466661143409
+  },
+  {
+    "text": "milk solids",
+    "bbox": [
+      128,
+      418,
+      244,
+      444
+    ],
+    "confidence": 0.999681954680483
+  },
+  {
+    "text": "Allergen Information: Contains milk",
+    "bbox": [
+      127,
+      468,
+      528,
+      501
+    ],
+    "confidence": 0.9924238012469555
+  },
+  {
+    "text": "contain wheat and soy",
+    "bbox": [
+      586,
+      470,
+      830,
+      500
+    ],
+    "confidence": 0.7469209273533257
+  },
+  {
+    "text": "Manufactured by: Crispo Snacks Pvt Ltd;",
+    "bbox": [
+      130,
+      521,
+      580,
+      554
+    ],
+    "confidence": 0.829203626895966
+  },
+  {
+    "text": "3 Ring Road; Mangaluru 575001",
+    "bbox": [
+      586,
+      521,
+      930,
+      554
+    ],
+    "confidence": 0.4848521255940954
+  },
+  {
+    "text": "FSSAI Lic. No:: 12122008000321",
+    "bbox": [
+      128,
+      574,
+      496,
+      602
+    ],
+    "confidence": 0.7193189417654244
+  },
+  {
+    "text": "MRP: Rs_",
+    "bbox": [
+      130,
+      626,
+      232,
+      652
+    ],
+    "confidence": 0.8659943047894062
+  },
+  {
+    "text": "20.00",
+    "bbox": [
+      240,
+      626,
+      304,
+      652
+    ],
+    "confidence": 0.9998332916888437
+  },
+  {
+    "text": "Best before",
+    "bbox": [
+      130,
+      678,
+      266,
+      704
+    ],
+    "confidence": 0.8460376387811624
+  },
+  {
+    "text": "months from date of packing",
+    "bbox": [
+      286,
+      678,
+      594,
+      709
+    ],
+    "confidence": 0.8482204133330922
+  },
+  {
+    "text": "May",
+    "bbox": [
+      532,
+      466,
+      591,
+      504
+    ],
+    "confidence": 0.7256961464881897
+  }
+]
