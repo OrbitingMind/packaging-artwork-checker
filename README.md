@@ -1,6 +1,33 @@
-# Packaging Artwork Compliance Checker
+# ArtGuard: AI-Powered Packaging Artwork Compliance Checker for FSSAI Regulations
 
-Automated regulatory compliance verification for packaged food artwork against FSSAI labelling regulations (Esko Hackathon — Track 2).
+**Team Pixel Proof** | Esko Hackathon, Track 2
+
+Automated regulatory compliance verification for packaged food artwork against FSSAI labelling regulations.
+
+**Live demo:** https://packaging-artwork-checker.streamlit.app
+*(If the app is asleep, click "Yes, get this app back up" and wait about a minute.)*
+
+---
+
+## Demo
+
+Pick a sample (or upload your own artwork and choose its approved spec), then click **Run Compliance Audit**. Click any box on the artwork to see why it was flagged.
+
+![Click a box to see the reason](docs/click-panel.png)
+*Click a flagged box: found value vs expected value, the reason and the FSSAI clause.*
+
+| Compliant label | Violation detected |
+|---|---|
+| ![Compliant](docs/compliant.png) | ![Violation](docs/violation.png) |
+| *All 10 rules pass, shown in green* | *Illegal unit "gm" in red, passing rules in green* |
+
+| Instant verdict | Rule-by-rule reasoning |
+|---|---|
+| ![Findings](docs/findings.png) | ![Reason](docs/reason.png) |
+| *10 rules checked, 9 passed, 1 violation* | *Every rule has a found-vs-expected card* |
+
+![Upload](docs/upload.png)
+*Upload your own artwork and select its approved spec.*
 
 ---
 
@@ -8,7 +35,7 @@ Automated regulatory compliance verification for packaged food artwork against F
 
 Food packaging artwork must strictly comply with mandatory labelling standards before going to print. Manual artwork auditing is slow, repetitive, and vulnerable to missed violations or costly false rejections.
 
-This system takes a **packaging artwork image** and an **approved product specification**, extracts declared packaging copy via vision AI, and validates it against **10 FSSAI labelling rules** using deterministic Python verification. Every rule verdict is backed by explicit evidence (extracted text, expected value, and reason).
+This system takes a **packaging artwork image** and an **approved product specification**, extracts declared packaging copy via vision AI, and validates it against **10 FSSAI labelling rules** using deterministic Python verification. Every rule verdict is backed by explicit evidence (extracted text, expected value, and reason), and the evidence is drawn directly on the artwork.
 
 ---
 
@@ -21,6 +48,9 @@ flowchart LR
     D["Approved Spec (JSON)"] --> E["Deterministic Rule Engine"]
     C --> E
     E --> F["Verdict & Evidence: PASS / FAIL / NEEDS_REVIEW"]
+    A --> G["OCR (EasyOCR) for text positions"]
+    F --> H["Evidence boxes on the artwork"]
+    G --> H
 ```
 
 ### Core Design Principles
@@ -28,6 +58,7 @@ flowchart LR
 - **Deterministic verification**: All rule evaluations (comparisons, regex, equality, unit checks) run in deterministic Python code.
 - **Fail-safe uncertainty**: If field extraction confidence is low (< 0.60) or ingredient ordering is scrambled, the system flags `NEEDS_REVIEW` instead of guessing or raising false alarms.
 - **No cascading errors**: Dependent rules (e.g., R02 quantity match and R03 unit check) return `N/A` when the primary field is absent (R01 missing net quantity), eliminating downstream false alarms.
+- **Evidence on the artwork**: OCR provides text positions, so each finding is highlighted where it occurs. Missing items (for example an absent allergen section) are shown as a dashed region with a label.
 
 ---
 
@@ -56,8 +87,8 @@ The evaluation dataset consists of **58 packaging images** across **5 synthetic 
 - **Total Images**: 58
   - Clean labels: 10 images (compliant baselines)
   - Error labels: 48 images (exactly 1 injected regulatory defect per image)
-- **Ground Truth**: [`dataset/answer_key.json`](file:///c:/Users/Asus/Documents/esko-checker/dataset/answer_key.json) with expected verdicts per rule per image.
-- **Split**: 40/60 train/test strategy defined in [`dataset/split.json`](file:///c:/Users/Asus/Documents/esko-checker/dataset/split.json):
+- **Ground Truth**: [`dataset/answer_key.json`](dataset/answer_key.json) with expected verdicts per rule per image.
+- **Split**: 40/60 dev/test strategy defined in [`dataset/split.json`](dataset/split.json):
   - **Dev Split**: 24 images (used for pipeline development and rule calibration)
   - **Test Split**: 34 images (held-out test set evaluated once)
 
@@ -76,6 +107,8 @@ Evaluated across **34 test images** (324 evaluated rule checks, 4 excluded as `N
 | **Recall (with review)** | **100.0%** | $(\text{TP} + \text{Caught}) / (\text{TP} + \text{FN} + \text{Caught})$ |
 | **False Alarm Rate** | **0.0%** | $\text{FP} / (\text{FP} + \text{TN} + \text{Review Burden})$ |
 | **Review Rate** | **0.0%** | Definite verdicts without unnecessary human escalation |
+
+> **Note:** these results are on clean, synthetic labels, where the vision model reads text easily. We expect lower numbers on real packaging photographs (see Limitations).
 
 #### Per-Rule Breakdown (Test Split)
 
@@ -110,20 +143,25 @@ The development split (24 images) was used to identify and fix failure modes bef
 - **Synthetic artwork**: Evaluated on clean, digital 2D packaging artwork. Real-world photographs with physical folds, glares, perspective distortion, and shadows present additional noise.
 - **Small sample size per rule**: With 1 to 4 defect samples per rule in the test split, percentage metrics have coarse granularity.
 - **Narrow domain**: Scope currently covers packaged foods in India under FSSAI rules.
-- **Clause verification**: FSSAI legal references in `rules.yaml` are tagged `VERIFY` pending final regulatory Gazette mapping.
-- **OCR insufficiency**: Traditional OCR was inadequate on complex packaging copy (EasyOCR hit rates: **66.7%** on net quantity, **36.4%** on MRP), necessitating vision LLM extraction.
-- **No GUI yet**: Currently command-line and programmatic evaluation only.
+- **Clause verification**: FSSAI legal references in `rules.yaml` are tagged `VERIFY` pending final regulatory Gazette mapping, so the evidence panel shows `FSSAI Clause: VERIFY`.
+- **OCR insufficiency**: Traditional OCR was inadequate on complex packaging copy (EasyOCR hit rates: **66.7%** on net quantity, **36.4%** on MRP), necessitating vision LLM extraction. OCR is used only to locate text for the highlight boxes.
+- **Manual spec selection**: In upload mode the user must pick the matching approved spec. A mismatched spec (for example a chips label checked against the juice spec) produces false violations.
 - **Single-prompt baseline pending**: Direct comparison against an unconstrained end-to-end LLM prompt is in progress.
 
 ---
 
 ## 7. Roadmap
 
-- **Streamlit Web UI**: Visual inspection interface with bounding box highlights and side-by-side spec comparison.
-- **Clickable Evidence Overlays**: Direct visual callouts explaining the exact reason and clause behind every finding.
-- **Physical Test Set**: Benchmark against photographed real-world packages with varied lighting and angles.
-- **Single-Prompt Baseline Benchmark**: Quantitative comparison demonstrating the precision advantage of decoupled vision + deterministic rules over raw LLM reasoning.
-- **Expanded Scope**: Support for non-food categories (cosmetics, pharma, household products) and multilingual regional Indian scripts.
+**Completed**
+- Streamlit web UI with side-by-side artwork and approved spec, verdict banner, scorecards and rule-by-rule findings.
+- Clickable evidence overlays: boxes on the artwork, with a panel showing found vs expected value, the reason and the clause.
+
+**Planned**
+- **Auto-detect the product spec** from the artwork, or warn when the selected spec does not match.
+- **Official FSSAI clause references** to replace the `VERIFY` placeholders.
+- **Physical test set**: benchmark against photographed real-world packages with varied lighting and angles.
+- **Single-prompt baseline benchmark**: quantitative comparison showing the precision advantage of decoupled vision + deterministic rules over raw LLM reasoning.
+- **Expanded scope**: non-food categories (cosmetics, pharma, household products) and multilingual regional Indian scripts.
 
 ---
 
@@ -189,8 +227,9 @@ esko-checker/
 │   ├── answer_key.json      # Ground truth expected verdicts per rule
 │   ├── split.json           # Dev (24) and Test (34) split definitions
 │   └── generate_dataset.py  # Dataset generator and defect injector
+├── docs/                    # Demo screenshots used in this README
 ├── outputs/
-│   ├── cache/               # Disk-cached vision extractions (avoids repeat API calls)
+│   ├── cache/               # Cached vision extractions, OCR lines and evidence boxes
 │   ├── eval_dev.md          # Dev set markdown evaluation report
 │   ├── eval_test.md         # Test set markdown evaluation report
 │   └── eval_dev_v1.md       # Dev set initial baseline report
@@ -198,10 +237,15 @@ esko-checker/
 │   ├── test_rules.py        # Rules configuration validation tests
 │   ├── test_checks.py       # Deterministic rule engine unit tests
 │   ├── test_ocr.py          # OCR extraction tests
+│   ├── test_locate.py       # Evidence box location tests
 │   └── test_evaluate.py     # Evaluation metrics and parsing tests
-├── app.py                   # Interactive Streamlit web application prototype
+├── app.py                   # Interactive Streamlit web application
+├── annotated_view.py        # Clickable annotated image view
+├── locate.py                # Maps findings to boxes on the artwork
+├── precompute_cache.py      # Precomputes OCR and evidence for the curated samples
 ├── checks.py                # FSSAI compliance verification engine (R01-R10)
 ├── extract_vision.py        # Vision extraction module using Claude Sonnet
+├── extract_ocr.py           # EasyOCR text and position extraction
 ├── pipeline.py              # Pipeline coordinator with disk caching
 ├── evaluate.py              # Dataset evaluation runner and report generator
 ├── run_demo.py              # Standalone demonstration script
